@@ -39,6 +39,8 @@ jobs:
         run: npm install --force
       - name: Build
         run: npm run build
+        env:
+          VITE_UNSPLASH_ACCESS_KEY: ${{ secrets.VITE_UNSPLASH_ACCESS_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
