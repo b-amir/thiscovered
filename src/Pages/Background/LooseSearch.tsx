@@ -78,18 +78,19 @@ export const LooseSearch: React.FC<LooseSearchProps> = ({
 
       {loading && (
         <div className="fetch-status loading">
-          {" "}
-          <Spinner /> Loading
+          <Spinner />
+          Loading
         </div>
       )}
       {!loading && data != null && (
         <>
           <div className="fetch-status found">
-            Found: a random image on{" "}
+            Found: a random image on
+            <div className="spacer" />
             <a href="https://unsplash.com/?utm_source=ThisCovered&utm_medium=referral">
               Unsplash
             </a>
-            ,{" "}
+            ,<div className="spacer" />
             <a href={data} target="_blank" rel="noreferrer">
               open image
             </a>

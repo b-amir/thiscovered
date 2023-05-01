@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 138" id="person-default" data-supported-dps="2048x512">
+<svg 
+xmlns="http://www.w3.org/2000/svg" 
+viewBox="0 0 552 138"
+id="person-default"
+data-supported-dps="2048x512"
+width="1584"
+height="396"
+  >
   <path fill="none" d="M0 0h552v138H0z"/>
   <path fill="#d9e5e7" d="M0 0h552v138H0z"/>
   <path fill="#bfd3d6" d="M380 0h172v138H380z"/>

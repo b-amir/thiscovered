@@ -84,18 +84,16 @@ const ImageSearch: React.FC<ImageSearchProps> = ({
       )}
       {!loading && data != null && (
         <>
-          {/* <img src={data.urls.regular} alt={data.alt_description} /> */}
           <div className="fetch-status found">
-            Found:
-            {/* <div className="image-credits"> */}
-            {/* <p> */} by <a href={data.user.links.html}>{data.user.name}</a>{" "}
-            on{" "}
+            Found: by <div className="spacer" />
+            <a href={data.user.links.html}>{data.user.name}</a>{" "}
+            <div className="spacer" />
+            on <div className="spacer" />
             <a href="https://unsplash.com/?utm_source=ThisCovered&utm_medium=referral">
               Unsplash
             </a>
-            , <a href={data.urls.regular}>link to image</a>
-            {/* </p> */}
-            {/* </div> */}
+            ,<div className="spacer" />{" "}
+            <a href={data.urls.regular}>link to image</a>
           </div>
         </>
       )}

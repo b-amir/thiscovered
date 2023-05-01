@@ -4,7 +4,7 @@ ul.checklist-container {
 }
 
 .checklist-parent-item {
-  background: url(/assets/empty-checkbox.svg) no-repeat 36px 6px transparent;
+  background: url(/assets/empty-checkbox.svg) no-repeat 36px 8px transparent;
 
 
   margin-top: 2em;
@@ -38,7 +38,7 @@ ul.checklist-container {
 }
 
 .checklist-child-item {
-  background: url(/assets/empty-checkbox.svg) no-repeat 36px 4px transparent;
+  background: url(/assets/empty-checkbox.svg) no-repeat 36px 6px transparent;
   margin-top: 0.5em;
   list-style-type: none;
   padding: 0px 0px 1px 24px;
@@ -57,7 +57,7 @@ ul.checklist-container {
 }
 
 li.checked-list {
-  background: url(/assets/checked-checkbox.svg) no-repeat 38px 4px transparent;
+  background: url(/assets/checked-checkbox.svg) no-repeat 38px 6px transparent;
   list-style-type: none;
   vertical-align: middle;
   transition: all 0.2s cubic-bezier(1, 1.59, 1, 3.1);
@@ -68,7 +68,7 @@ li.checked-list {
 }
 
 .checklist-parent-item.checked-list {
-  background: url(/assets/checked-checkbox.svg) no-repeat 38px 6px transparent;
+  background: url(/assets/checked-checkbox.svg) no-repeat 38px 8px transparent;
 
 
 }

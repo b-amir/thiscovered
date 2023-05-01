@@ -30,9 +30,17 @@ export const CoverBox: React.FC<IProps> = ({
       width: 1584,
       height: 396,
       scale: 2,
+      maximumCanvasSize: 1584,
+      minimumCanvasSize: 1584,
       style: {
-        borderRadius: "0px"
+        borderRadius: "0px",
+        // display: "flex",
+        flexDirection: "row-reverse",
+
+        justifyContent: "flex-start",
+        alignItems: "flex-start"
       }
+
       // filter: true
     }).then((dataUrl) => {
       const link = document.createElement("a");

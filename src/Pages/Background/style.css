@@ -65,10 +65,10 @@ p.custom-file-upload-label {
   background: var(--bg-button);
   color: var(--text-color);
   min-height: 50px;
-
-
   transition: all 0.2s ease-in-out;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .secondary-button:active {
@@ -100,7 +100,7 @@ button.secondary-button:hover {
 }
 
 input.keyword_input {
-  min-width: 75%;
+  min-width: 85%;
   margin: 0 10px 0 0;
 }
 
@@ -149,6 +149,7 @@ button.upload_remove:hover {
 }
 
 .fetch-status {
+  display: flex;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -159,6 +160,9 @@ button.upload_remove:hover {
   border-radius: 9px;
   margin: 3px 0 12px 0;
   transition: all 0.5s ease;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .fetch-status.found a {

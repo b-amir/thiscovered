@@ -13,7 +13,7 @@ const UploadImage: React.FC<IProps> = ({ setImageUrl }) => {
       <div className="custom-file-row">
         <label
           htmlFor="file-upload"
-          className="custom-file-upload upload_label">
+          className="custom-file-upload upload_label secondary-button">
           Choose file
           <input
             id="file-upload"
