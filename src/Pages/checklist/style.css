@@ -181,7 +181,7 @@ li.checked-list {
 
   .checklist-child-item {
     /* list-style-image: url(../assets/squircle-right.svg); */
-    background: url(../../assets/squircle-right.svg) no-repeat 0px 6px transparent;
+    background: url(/assets/squircle-right.svg) no-repeat 0px 6px transparent;
     margin-top: 0.5em;
     list-style-type: none;
     padding: 0px 0px 1px 20px;
@@ -207,7 +207,7 @@ li.checked-list {
 
   li.checked-list {
     /* list-style-image: url(../../assets/squircle-check.svg) !important; */
-    background: url(../../assets/squircle-check.svg) no-repeat 2px 6px transparent;
+    background: url(/assets/squircle-check.svg) no-repeat 2px 6px transparent;
     list-style-type: none;
     /* padding: 0px 0px 1px 24px; */
     vertical-align: middle;
@@ -221,14 +221,14 @@ li.checked-list {
 
   .checklist-parent-item.checked-list {
 
-    background: url(../../assets/squircle-check.svg) no-repeat 38px 6px transparent;
+    background: url(/assets/squircle-check.svg) no-repeat 38px 6px transparent;
 
 
   }
 
   .checklist-parent-item {
     /* list-style-image: url(../assets/squircle-down-right.svg); */
-    background: url(../../assets/squircle-down-right.svg) no-repeat 36px 6px transparent;
+    background: url(/assets/squircle-down-right.svg) no-repeat 36px 6px transparent;
     margin-top: 2em;
     list-style-type: none;
     padding: 0px 0px 10px 24px !important;
