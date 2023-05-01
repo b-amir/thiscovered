@@ -5,8 +5,8 @@ this.covered is a web application designed to help LinkedIn users create standou
 In addition to the cover photo editor, this.covered also includes a bonus feature: a checklist of things to do to create a better LinkedIn profile. Users can check off items on the list and keep track of their progress over time.
 
 
-## Installation
-To use this.covered, simply visit the website at https://github.com/theamirm/thiscovered and follow the instructions on the homepage.
+## Usage
+To use this.covered, simply visit the website at https://github.com/theamirm/thiscovered and follow the instructions step by step.
 
 
 ## Features
