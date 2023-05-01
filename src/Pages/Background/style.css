@@ -1,0 +1,183 @@
+input[type="file"] {
+  display: none;
+}
+
+
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  /* display: inline-block; */
+  padding: 6px 12px;
+  cursor: pointer;
+  /* margin: 8px 0; */
+  padding: 7px 22px;
+  /* border: 1px solid #0000002b; */
+  border: 1px solid var(--border-color-2);
+
+  font-size: 14px;
+  border-radius: 12px;
+  /* max-width: 530px; */
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  /* background: #f2efec; */
+  background: var(--bg-button);
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+  color: var(--text-color);
+
+  /* margin: 0 auto; */
+}
+
+label.custom-file-upload.upload_label:hover {
+  /* background: #e0ddda; */
+  background: var(--accent-4);
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.215));
+}
+
+p.custom-file-upload-label {
+  margin: 0;
+  /* padding: 0; */
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0px 0px 10px 0px;
+}
+
+.custom-file-row {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.secondary-button {
+  /* margin: 8px 0; */
+  padding: 4.5px 22px;
+  border: 1px solid var(--border-color-2);
+  font-size: 14px;
+  border-radius: 12px;
+  max-width: 530px;
+  /* width: 80%; */
+  cursor: pointer;
+  /* background: #f2efec; */
+  background: var(--bg-button);
+  color: var(--text-color);
+
+
+  transition: all 0.2s ease-in-out;
+
+}
+
+.secondary-button:active {
+  /* background: #e0ddda; */
+  background: var(--accent-4);
+  /* filter: drop-shadow(-2px 0px 2px rgba(0, 0, 0, 0.941)); */
+  /* padding: 20px; */
+  box-shadow: 0px 0px 0px 3px var(--accent-4);
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  /* top: 2px; */
+}
+
+/* when secondary-button is pressed, there should be an animation feedback */
+
+
+
+
+button.secondary-button.keyword_button:hover {
+  background: var(--accent-4);
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.215));
+
+}
+
+button.secondary-button:hover {
+  background: var(--accent-4) !important;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.215)) !important;
+
+}
+
+input.keyword_input {
+  width: 100%;
+  margin: 0 10px 0 0;
+}
+
+code {
+  background-color: #9e9e9e3d;
+  /* background-color: var(--accent-3); */
+  padding: 3px 7px 5px 7px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: monospace !important;
+  color: #343434;
+  color: var(--text-color-3);
+}
+
+button.upload_remove {
+  border: none;
+  background: none;
+  border-radius: 12px;
+  /* width: 35px; */
+  /* height: 100%; */
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  color: #8e8e8e;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+button.upload_remove:hover {
+  color: var(--text-color);
+}
+
+.image-credits {
+  font-size: 12px;
+  font-style: italic;
+  color: #8e8e8e;
+  margin: 0;
+  padding: 0px 0px 10px 0;
+  transition: all 0.4s ease;
+}
+
+.fetch-status {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 23px;
+  border-radius: 9px;
+  margin: 3px 0 12px 0;
+  transition: all 0.5s ease;
+}
+
+.fetch-status.found a {
+  text-decoration: none;
+  color: #30a27e;
+  transition: all 0.4s ease;
+}
+
+.fetch-status.found a:hover {
+  text-decoration: underline;
+  transition: all 0.4s ease;
+
+}
+
+.fetch-status.found {
+  color: #52823f;
+  background-color: #04ff001a;
+}
+
+.fetch-status.loading {
+  color: #566000;
+  background-color: #b6c6081a;
+  display: flex;
+}
+
+.fetch-status.error {
+  color: #8b3416;
+  background-color: #ff00001a;
+}

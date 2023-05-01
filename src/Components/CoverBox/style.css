@@ -1,0 +1,88 @@
+.cover_box {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+
+
+.grid-cover-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: ". grid-info-box";
+  grid-area: grid-cover-box;
+  width: 100%;
+  max-height: 400px;
+  min-height: 105px;
+  aspect-ratio: 4/1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.grid-info-box {
+  grid-area: grid-info-box;
+  position: absolute;
+  top: 50px;
+  /* width: 65% !important; */
+  width: clamp(80%, 85%, 95%);
+  right: 5%;
+  /* padding: 20px; */
+  padding: clamp(5%, 5%, 8%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 0px 1px #00000014;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(103, 116, 116, 0.3);
+  overflow: hidden;
+  /* flex-wrap: nowrap; */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+h2.InfoBox_name {
+  font-weight: 900;
+  font-size: xx-large;
+  color: #ffffffeb;
+  text-transform: capitalize;
+  margin: unset;
+  text-shadow: 0px 0px 5px #00000045;
+  text-align: center;
+  /* padding: 15px 0px; */
+  line-height: 1.2;
+  padding: 0 0 8px 0px;
+}
+
+p.InfoBox_job_title {
+  font-weight: 500;
+  background: #ffffff;
+  padding: 8px 26px;
+  border-radius: 11px;
+  text-transform: capitalize;
+  color: #000000d1;
+  text-align: center;
+  margin: 0;
+}
+
+p.InfoBox_email {
+  font-weight: 800;
+  color: #efefef;
+  font-size: smaller;
+  text-shadow: 0px 0px 2px #0000008a;
+  /* margin: 20px 10px; */
+  line-height: 2.5;
+}

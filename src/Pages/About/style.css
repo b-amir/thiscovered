@@ -1,0 +1,12 @@
+span.in {
+  background: #0a66c2e8;
+  padding: 2px 5px;
+  margin: 0px 0px 0px 2px !important;
+  border-radius: 4px;
+  display: inline-block;
+  color: white;
+  height: 25px !important;
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+}

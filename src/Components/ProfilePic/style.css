@@ -1,0 +1,83 @@
+.grid-profile-pic {
+  grid-area: grid-profile-pic;
+  z-index: 2;
+}
+
+img.glasses {
+  background-blend-mode: hard-light;
+  width: 60%;
+  height: 60%;
+  position: relative;
+  top: 0px;
+  left: 39px;
+  visibility: hidden;
+}
+
+
+.grid-profile-pic:hover img.glasses {
+  top: 36px;
+  visibility: visible;
+  transition: 0.9s all ease;
+}
+
+/* media queries for 768 and 425 */
+@media screen and (max-width: 768px) {
+  .grid-profile-pic {
+    grid-area: grid-profile-pic;
+    z-index: 2;
+    width: 150px !important;
+    height: 150px !important;
+    top: -10px !important;
+    left: 20px !important;
+  }
+
+  img.glasses {
+    background-blend-mode: hard-light;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    top: 0px;
+    left: 39px;
+    visibility: hidden;
+  }
+
+
+  .grid-profile-pic:hover img.glasses {
+    top: 25px;
+    left: 33px;
+    visibility: visible;
+    transition: 0.9s all ease;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .grid-cover-box {
+
+    grid-template-areas: "grid-profile-pic grid-info-box" !important;
+
+  }
+
+
+  .grid-profile-pic {
+    grid-area: grid-profile-pic;
+    /* grid-area: grid-cover-box; */
+    z-index: 2;
+    width: 100px !important;
+    height: 100px !important;
+    top: 190px !important;
+    left: 5% !important;
+    /* display: none; */
+    position: absolute !important;
+  }
+
+  .grid-profile-pic:hover img.glasses {
+    background-blend-mode: hard-light;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    top: 15px !important;
+    left: 22px !important;
+    /* visibility: hidden; */
+  }
+}

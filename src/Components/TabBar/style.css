@@ -1,0 +1,99 @@
+.grid-tab-bar {
+  grid-area: grid-tab-bar;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20px 0px;
+  align-items: center;
+  /* margin-left: 250px; */
+  overflow: overlay;
+  z-index: 1;
+  height: 70px;
+  position: relative;
+  top: 66px;
+  overflow-y: hidden;
+}
+
+.tab.active {
+  display: flex;
+  flex-direction: row;
+  background-color: #9db3c869;
+  background-color: var(--accent-3);
+  /* padding: 4px 28px; */
+  align-items: center;
+  /* border-radius: 22px; */
+  /* color: #56687a; */
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  padding: 9px 28px;
+  align-items: center;
+  border-radius: 25px;
+  color: var(--text-color-2);
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+  min-width: 130px;
+  justify-content: center;
+}
+
+.tab:hover {
+  /* color: #4c4c4cdb; */
+
+  background-color: #948a8a3d;
+  color: var(--text-color-3);
+}
+
+.bonus.tab::after {
+  content: "bonus";
+  /* background: #fdfdfd; */
+  background-color: var(--accent-2);
+  padding: 1px 8px 2px 8px;
+  border-radius: 21px;
+  height: 13px;
+  text-shadow: 0px 0px 2px #ffffffad;
+  font-size: 10px;
+  /* color: #000000; */
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 111px;
+  margin-bottom: 25px;
+  /* box-sizing: border-box; */
+  position: absolute;
+  box-shadow: 0px 0px 2px 1px #00000008, 0px 0px 0px 1px #0000001c;
+}
+
+.grid-tab-bar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+
+
+}
+
+.grid-tab-bar::-webkit-scrollbar-thumb {
+  background: #d5cec5;
+  /* border: none !important; */
+  width: 0px !important;
+  height: 0px !important;
+  /* border-radius: 5px; */
+  border-top: 9px solid #f3f3f3;
+  /* top: 5px !important; */
+}
+
+.grid-tab-bar::-webkit-scrollbar-track {
+  background: transparent;
+  /* make scrollbar transparent */
+
+}
+
+@media only screen and (max-width: 425px) {
+  .bonus.tab::after {
+    display: none;
+  }
+}

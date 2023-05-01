@@ -1,0 +1,222 @@
+[
+  {
+    "label": "Profile Picture",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Upload a high-quality profile picture",
+        "isChecked": false
+      },
+      {
+        "label": "Make sure your face takes up at least 60% of the frame",
+        "isChecked": false
+      },
+      {
+        "label": "Dress professionally and make sure the background is neutral",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Headline",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Create a catchy and descriptive headline",
+        "isChecked": false
+      },
+      {
+        "label": "Include keywords relevant to your industry",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Cover Image 😉",
+    "isChecked": true,
+    "subItems": [
+      {
+        "label": "Having a cover image makes you stand out",
+        "isChecked": true
+      },
+      {
+        "label": "Choose the right image that represents you and your brand",
+        "isChecked": true
+      },
+      {
+        "label": "Add information to the image to provide context",
+        "isChecked": true
+      }
+    ]
+  },
+  {
+    "label": "Summary",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Write a compelling summary that highlights your skills and experience",
+        "isChecked": false
+      },
+      {
+        "label": "Include your career objectives and goals",
+        "isChecked": false
+      },
+      {
+        "label": "Use bullet points to make your summary easy to read",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Experience",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "List your work experience in reverse chronological order",
+        "isChecked": false
+      },
+      {
+        "label": "Include your job title, company name, location, and employment dates",
+        "isChecked": false
+      },
+      {
+        "label": "Highlight your accomplishments and use numbers to quantify your results",
+        "isChecked": false
+      },
+      {
+        "label": "Include any relevant certifications, awards, or publications",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Education",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "List your education in reverse chronological order",
+        "isChecked": false
+      },
+      {
+        "label": "Include your degree, major, school name, and graduation date",
+        "isChecked": false
+      },
+      {
+        "label": "Highlight any academic honors, awards, or extracurricular activities",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Skills",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "List your skills and expertise",
+        "isChecked": false
+      },
+      {
+        "label": "Include keywords relevant to your industry",
+        "isChecked": false
+      },
+      {
+        "label": "Endorse your colleagues and ask them to endorse you",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Connections",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Connect with professionals in your industry",
+        "isChecked": false
+      },
+      {
+        "label": "Personalize your connection requests",
+        "isChecked": false
+      },
+      {
+        "label": "Join LinkedIn groups and participate in discussions",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Recommendations",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Ask for recommendations from colleagues and supervisors",
+        "isChecked": false
+      },
+      {
+        "label": "Write personalized recommendations for your connections",
+        "isChecked": false
+      },
+      {
+        "label": "Display your recommendations on your profile",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Engagement",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Share relevant and informative content on your feed",
+        "isChecked": false
+      },
+      {
+        "label": "Comment on and like posts from your connections",
+        "isChecked": false
+      },
+      {
+        "label": "Participate in industry-related discussions and groups",
+        "isChecked": false
+      },
+      {
+        "label": "Engage with thought leaders and influencers in your industry",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Visibility",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Make your profile public and searchable",
+        "isChecked": false
+      },
+      {
+        "label": "Include keywords relevant to your industry in your profile",
+        "isChecked": false
+      },
+      {
+        "label": "Customize your profile URL to make it more memorable",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "label": "Extras",
+    "isChecked": false,
+    "subItems": [
+      {
+        "label": "Add multimedia to your profile, such as videos and presentations",
+        "isChecked": false
+      },
+      {
+        "label": "Include your contact information and website links",
+        "isChecked": false
+      },
+      {
+        "label": "Update your profile regularly to showcase your latest achievements",
+        "isChecked": false
+      }
+    ]
+  }
+]
