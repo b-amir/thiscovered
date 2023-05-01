@@ -26,7 +26,7 @@ const Modal = ({
             <div className="modal-header">
               {window.innerWidth < 768 ? (
                 <p className="modal-help mobile">
-                  Rotate your device to landscape mode for a better screenshot.
+                  Rotate your device to landscape mode, then take a screenshot.
                 </p>
               ) : (
                 <p className="modal-help computer">

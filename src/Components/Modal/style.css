@@ -84,7 +84,7 @@ div#cover {
 
 
 div#modal-pop h2.InfoBox_name {
-  font-size: 3rem !important;
+  font-size: xx-large;
 }
 
 @media only screen and (max-width: 425px) {
@@ -104,5 +104,17 @@ div#modal-pop h2.InfoBox_name {
     border-radius: 50%;
     /* height: 2em;
     width: 2em; */
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .modal-pop .grid-cover-box {
+    /* border-radius: 0px; */
+    /* border: 3px solid white; */
+    /* width: 100%; */
+    /* box-sizing: revert; */
+    /* font-size: small !important; */
+    display: none;
   }
 }

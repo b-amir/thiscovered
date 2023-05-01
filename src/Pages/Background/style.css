@@ -87,10 +87,14 @@ p.custom-file-upload-label {
 
 
 
-button.secondary-button.keyword_button:hover {
-  background: var(--accent-4);
-  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.215));
-
+button.secondary-button.keyword_button {
+  display: flex;
+  align-items: center;
+  padding: 0px 16px 3px 16px;
+  min-width: 72px;
+  background: var(--bg-button);
+  border-left: 0;
+  border-radius: 0 12px 12px 0;
 }
 
 button.secondary-button:hover {
@@ -101,7 +105,8 @@ button.secondary-button:hover {
 
 input.keyword_input {
   min-width: 85%;
-  margin: 0 10px 0 0;
+  /* margin: 0 10px 0 0; */
+  border-radius: 12px 0 0 12px;
 }
 
 button.secondary-button.keyword_button {

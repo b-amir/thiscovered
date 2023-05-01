@@ -26,12 +26,13 @@ export const LooseSearch: React.FC<LooseSearchProps> = ({
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<UnsplashImage | null>(null);
   const [error, setError] = useState<Error | null>(null);
+  const [keyword, setKeyword] = useState<string>("");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    if (query.length === 0) return;
+    if (keyword.length === 0) return;
     setLoading(true);
-    fetch(`https://source.unsplash.com/1600x900?${query}`)
+    fetch(`https://source.unsplash.com/1600x900?${keyword}`)
       .then(async (response) => {
         if (!response.ok) {
           throw new Error(response.statusText);
@@ -66,7 +67,8 @@ export const LooseSearch: React.FC<LooseSearchProps> = ({
             placeholder="ex. Developer at work"
             // split the keyword by space and join them with +
             onChange={(event) => {
-              setQuery(event.target.value.split(" ").join("+"));
+              setQuery(event.target.value);
+              setKeyword(event.target.value.split(" ").join("+"));
             }}
             value={query}
           />
