@@ -1,7 +1,7 @@
 span.in {
   background: #0a66c2e8;
   padding: 2px 5px;
-  margin: 0px 0px 0px 2px !important;
+  margin: 0px 0px 0px 2px;
   border-radius: 4px;
   display: inline-block;
   color: white;
@@ -9,4 +9,14 @@ span.in {
   font-size: 20px;
   position: relative;
   top: -2px;
+}
+
+@media only screen and (max-width: 425px) {
+  span.in {
+    top: revert !important;
+    height: 22px !important;
+    width: 24px !important;
+    padding: 2px 4px;
+    font-size: 18px !important;
+  }
 }

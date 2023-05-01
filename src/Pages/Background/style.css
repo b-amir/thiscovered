@@ -64,6 +64,7 @@ p.custom-file-upload-label {
   /* background: #f2efec; */
   background: var(--bg-button);
   color: var(--text-color);
+  min-height: 50px;
 
 
   transition: all 0.2s ease-in-out;
@@ -99,8 +100,14 @@ button.secondary-button:hover {
 }
 
 input.keyword_input {
-  width: 100%;
+  min-width: 75%;
   margin: 0 10px 0 0;
+}
+
+button.secondary-button.keyword_button {
+  display: flex;
+  align-items: center;
+  padding: 0px 16px 3px 16px;
 }
 
 code {
