@@ -3,7 +3,7 @@ import { type IInfoBoxBG, type IPerson } from "../../App";
 import "./style.css";
 import { hexToRgb } from "../../utils/hexToRgb";
 import useTypingAnimation from "../../hooks/useTypingAnimation";
-import DownloadIcon from "../../assets/DownloadIcon";
+import DownloadIcon from "../../../public/assets/DownloadIcon";
 
 interface IProps {
   updatePerson: (field: string, value: string) => void;

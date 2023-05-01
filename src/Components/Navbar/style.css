@@ -51,7 +51,7 @@ span.logo_covered {
 
 .slider:before {
   position: absolute;
-  content: url(/src/assets/light2.svg);
+  content: url(/assets/light2.svg);
   height: 26px;
   width: 26px;
   left: 8px;
@@ -75,7 +75,7 @@ input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-  content: url(/src/assets/dark.svg);
+  content: url(/assets/dark.svg);
   filter: drop-shadow(0px 0px 8px #00e7ff);
 }
 

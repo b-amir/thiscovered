@@ -6,7 +6,7 @@ import useTypingAnimation from "../../hooks/useTypingAnimation";
 import Checklist from "./Checklist";
 
 import "./style.css";
-import CopyIcon from "../../assets/CopyIcon";
+import CopyIcon from "../../../public/assets/CopyIcon";
 
 interface IChecklistTabProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;

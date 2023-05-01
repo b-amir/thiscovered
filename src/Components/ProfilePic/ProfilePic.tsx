@@ -6,7 +6,7 @@ export const ProfilePic = (): JSX.Element => {
     <div
       className="grid-profile-pic"
       style={{
-        backgroundImage: "url(./src/assets/defaultPP.svg)",
+        backgroundImage: "url(./assets/defaultPP.svg)",
         position: "relative",
         top: "-25px",
         left: "30px",
@@ -21,7 +21,7 @@ export const ProfilePic = (): JSX.Element => {
       }}>
       <img
         className="glasses"
-        src="./src/assets/glassesDWI.svg"
+        src="./assets/glassesDWI.svg"
         alt="profile pic"
       />
     </div>

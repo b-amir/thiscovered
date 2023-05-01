@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import FindIcon from "../../assets/FindIcon";
-import ShuffleIcon from "../../assets/ShuffleIcon";
-import Spinner from "../../assets/Spinner";
+import FindIcon from "../../../public/assets/FindIcon";
+import ShuffleIcon from "../../../public/assets/ShuffleIcon";
+import Spinner from "../../../public/assets/Spinner";
 
 interface LooseSearchProps {
   setImageUrl: React.Dispatch<React.SetStateAction<string>>;

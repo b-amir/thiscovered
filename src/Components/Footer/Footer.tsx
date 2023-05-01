@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
           rel="noopener noreferrer">
           <img
             className="linkedin-logo footer-icon"
-            src="./src/assets/linkedin.svg"
+            src="./assets/linkedin.svg"
             alt="linkedin logo"
             // width={12}
             height={14}
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
           rel="noopener noreferrer">
           <img
             className="github-logo footer-icon"
-            src="./src/assets/github2.svg"
+            src="./assets/github2.svg"
             alt="github logo"
             // width={12}
             height={16}

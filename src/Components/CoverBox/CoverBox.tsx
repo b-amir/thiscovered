@@ -50,7 +50,7 @@ export const CoverBox: React.FC<IProps> = ({
       id="cover"
       style={{
         backgroundImage: `url(${
-          imageUrl !== "" ? imageUrl : "./src/assets/defaultBG.svg"
+          imageUrl !== "" ? imageUrl : "./assets/defaultBG.svg"
         })`
       }}>
       <InfoBox
