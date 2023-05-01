@@ -5,7 +5,7 @@ ul.checklist-container {
 
 .checklist-parent-item {
   /* list-style-image: url(../assets/squircle-down-right.svg); */
-  background: url(../../assets/squircle-down-right.svg) no-repeat 36px 6px transparent;
+  background: url(/assets/squircle-down-right.svg) no-repeat 36px 6px transparent;
   margin-top: 2em;
   list-style-type: none;
   padding: 0px 0px 1px 24px;
@@ -39,7 +39,7 @@ ul.checklist-container {
 
 .checklist-child-item {
   /* list-style-image: url(../assets/squircle-right.svg); */
-  background: url(../../assets/squircle-right.svg) no-repeat 36px 4px transparent;
+  background: url(/assets/squircle-right.svg) no-repeat 36px 4px transparent;
   margin-top: 0.5em;
   list-style-type: none;
   padding: 0px 0px 1px 24px;
@@ -59,7 +59,7 @@ ul.checklist-container {
 
 li.checked-list {
   /* list-style-image: url(../../assets/squircle-check.svg) !important; */
-  background: url(../../assets/squircle-check.svg) no-repeat 38px 4px transparent;
+  background: url(/assets/squircle-check.svg) no-repeat 38px 4px transparent;
   list-style-type: none;
   /* padding: 0px 0px 1px 24px; */
   vertical-align: middle;
@@ -73,7 +73,7 @@ li.checked-list {
 
 .checklist-parent-item.checked-list {
 
-  background: url(../../assets/squircle-check.svg) no-repeat 38px 6px transparent;
+  background: url(/assets/squircle-check.svg) no-repeat 38px 6px transparent;
 
 
 }

@@ -50,7 +50,7 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
           improvements, please feel free to{" "}
           <a
             className="description-link"
-            href="https://www.github.com/theamirm/"
+            href="https://github.com/theamirm/thiscovered"
             target="_blank"
             rel="noopener noreferrer">
             contribute on GitHub

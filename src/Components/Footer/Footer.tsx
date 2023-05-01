@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
       <div className="footer-divider">*/</div>
       <div className="footer-info">
         <a
-          href="https://www.github.com/theamirm/"
+          href="https://github.com/theamirm/thiscovered"
           target="_blank"
           rel="noopener noreferrer">
           <img
