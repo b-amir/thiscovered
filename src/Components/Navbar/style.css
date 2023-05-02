@@ -7,6 +7,8 @@
   max-width: 1000px;
   align-items: center;
   padding: 0 25px 0 20px;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 nav h1 {

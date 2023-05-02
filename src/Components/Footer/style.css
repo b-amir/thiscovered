@@ -10,6 +10,8 @@ footer.footer {
   flex-wrap: wrap;
   opacity: 0.6;
   transition: 0.3s all ease;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 footer.footer:hover {

@@ -114,31 +114,15 @@ export default function App(): JSX.Element {
       <section className="main">
         <CoverBox imageUrl={imageUrl} Person={Person} InfoBoxBG={InfoBoxBG} />
 
-        {
-          showPortal &&
-            createPortal(
-              <CoverBox
-                imageUrl={imageUrl}
-                Person={Person}
-                InfoBoxBG={InfoBoxBG}
-              />,
-              portalContainerRef.current
-              // document.body
-            )
-
-          // wait 2 seconds and then create portal
-          // setTimeout(() => {
-          //   createPortal(
-          //     <CoverBox
-          //       imageUrl={imageUrl}
-          //       Person={Person}
-          //       InfoBoxBG={InfoBoxBG}
-          //     />,
-          //     // portalContainerRef.current
-          //     document.body
-          //   );
-          // }, 2000)
-        }
+        {showPortal &&
+          createPortal(
+            <CoverBox
+              imageUrl={imageUrl}
+              Person={Person}
+              InfoBoxBG={InfoBoxBG}
+            />,
+            portalContainerRef.current
+          )}
 
         <Modal
           visibleModal={visibleModal}

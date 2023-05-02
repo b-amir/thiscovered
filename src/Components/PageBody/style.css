@@ -332,6 +332,7 @@ h3.description-title {
     grid-area: grid-divider;
     z-index: 25 !important;
 
+
   }
 
   .grid-cover-box {
@@ -340,6 +341,7 @@ h3.description-title {
     border-bottom: 4px solid var(--border-color) !important;
     border-top: 4px solid var(--border-color) !important;
     width: 100% !important;
+
 
   }
 
@@ -364,6 +366,7 @@ h3.description-title {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     box-shadow: inset 0px 5px 8px 0px var(--shadow-color-2);
+
   }
 
   .grid-tab-bar .tab {
@@ -372,6 +375,8 @@ h3.description-title {
     min-width: revert !important;
     white-space: nowrap;
     font-size: 13px;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
 }

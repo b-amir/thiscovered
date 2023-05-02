@@ -29,6 +29,8 @@ img.glasses {
     height: 150px !important;
     top: -10px !important;
     left: 20px !important;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   img.glasses {
@@ -39,6 +41,8 @@ img.glasses {
     top: 0px;
     left: 39px;
     visibility: hidden;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
 
@@ -47,6 +51,8 @@ img.glasses {
     left: 33px;
     visibility: visible;
     transition: 0.9s all ease;
+    -webkit-user-select: none;
+    user-select: none;
   }
 }
 
