@@ -2,11 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { InfoBox } from "./InfoBox";
 import { type IPerson, type IInfoBoxBG } from "../../App";
 import "./style.css";
-// import {
-//   exportComponentAsJPEG,
-//   exportComponentAsPDF,
-//   exportComponentAsPNG
-// } from "react-component-export-image";
 import { domToPng } from "modern-screenshot";
 import { useDrag } from "../../hooks/useDrag";
 
@@ -22,7 +17,7 @@ export const CoverBox: React.FC<IProps> = ({
   InfoBoxBG
 }: IProps) => {
   // const componentRef = useRef();
-  const printRef = useRef();
+  // const printRef = useRef();
 
   const handleDownloadImage = async () => {
     await domToPng(document.querySelector("#cover"), {
@@ -57,6 +52,8 @@ export const CoverBox: React.FC<IProps> = ({
     handleMouseMove,
     zoom,
     handleScroll,
+    enableScroll,
+    disableScroll,
     handleTouchStart,
     handleTouchMove
   } = useDrag();
@@ -71,22 +68,26 @@ export const CoverBox: React.FC<IProps> = ({
     };
   }, [handleMouseMove, handleMouseUp]);
 
-  let backgroundSize: string | number = zoom * 100 + "%";
+  // let backgroundSize: string | number = zoom * 100 + "%";
+
+  let backgroundsize = `${zoom * 100}%`;
   if (window.innerWidth < 425) {
     // for visual porpuses, the mobile version's proportions
     // doesnt follow the usual aspect ratio. hence this trick:
-    backgroundSize = "";
+    backgroundsize = "";
   }
 
   return (
     <div
-      ref={printRef}
+      // ref={printRef}
       // onClick={() => handleDownloadImage()}
 
       onMouseDown={handleMouseDown}
       onWheel={handleScroll}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
+      onMouseEnter={disableScroll}
+      onMouseLeave={enableScroll}
       className="grid-cover-box"
       id="cover"
       style={{
@@ -97,7 +98,8 @@ export const CoverBox: React.FC<IProps> = ({
         backgroundRepeat: "no-repeat",
         width: "100%",
         height: "100%",
-        backgroundSize: `${backgroundSize}`
+        backgroundSize: `${backgroundsize}`,
+        touchAction: "none"
       }}>
       <InfoBox
         name={Person.name}

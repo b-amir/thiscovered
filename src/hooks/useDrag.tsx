@@ -35,11 +35,29 @@ export const useDrag = () => {
   const handleScroll = useCallback(
     (e: React.WheelEvent) => {
       // e.preventDefault();
+
       const newZoom = zoom + (e.deltaY > 0 ? -0.1 : 0.1);
       setZoom(Math.max(1, newZoom));
     },
     [zoom, setZoom]
   );
+  const enableScroll = () => {
+    document.removeEventListener("wheel", preventDefault, false);
+  };
+
+  const disableScroll = () => {
+    document.addEventListener("wheel", preventDefault, {
+      passive: false
+    });
+  };
+
+  function preventDefault(e: any) {
+    e = e || window.event;
+    if (e.preventDefault) {
+      e.preventDefault();
+    }
+    e.returnValue = false;
+  }
   const touchPoint1 = useRef<Touch | null>(null);
   const touchPoint2 = useRef<Touch | null>(null);
   const handleTouchStart = useCallback(
@@ -94,6 +112,8 @@ export const useDrag = () => {
     handleMouseMove,
     zoom,
     handleScroll,
+    enableScroll,
+    disableScroll,
     handleTouchStart,
     handleTouchMove
   };
