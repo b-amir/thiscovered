@@ -28,6 +28,7 @@ export const Footer: React.FC = () => {
           />
           Amir Bazgir
         </a>{" "}
+        {window.innerWidth < 425 && <br />}
         and I make quirky things on the internet.
       </div>
       <div className="footer-divider">*/</div>

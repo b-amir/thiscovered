@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { InfoBox } from "./InfoBox";
 import { type IPerson, type IInfoBoxBG } from "../../App";
 import "./style.css";
@@ -8,6 +8,7 @@ import "./style.css";
 //   exportComponentAsPNG
 // } from "react-component-export-image";
 import { domToPng } from "modern-screenshot";
+import { useDrag } from "../../hooks/useDrag";
 
 interface IProps {
   imageUrl: string;
@@ -21,7 +22,6 @@ export const CoverBox: React.FC<IProps> = ({
   InfoBoxBG
 }: IProps) => {
   // const componentRef = useRef();
-
   const printRef = useRef();
 
   const handleDownloadImage = async () => {
@@ -50,16 +50,54 @@ export const CoverBox: React.FC<IProps> = ({
     });
   };
 
+  const {
+    position,
+    handleMouseDown,
+    handleMouseUp,
+    handleMouseMove,
+    zoom,
+    handleScroll,
+    handleTouchStart,
+    handleTouchMove
+  } = useDrag();
+
+  useEffect(() => {
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [handleMouseMove, handleMouseUp]);
+
+  let backgroundSize: string | number = zoom * 100 + "%";
+  if (window.innerWidth < 425) {
+    // for visual porpuses, the mobile version's proportions
+    // doesnt follow the usual aspect ratio. hence this trick:
+    backgroundSize = "";
+  }
+
   return (
     <div
       ref={printRef}
-      onClick={() => handleDownloadImage()}
+      // onClick={() => handleDownloadImage()}
+
+      onMouseDown={handleMouseDown}
+      onWheel={handleScroll}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
       className="grid-cover-box"
       id="cover"
       style={{
         backgroundImage: `url(${
           imageUrl !== "" ? imageUrl : "./assets/defaultBG.svg"
-        })`
+        })`,
+        backgroundPosition: `${position.x}px ${position.y}px`,
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        height: "100%",
+        backgroundSize: `${backgroundSize}`
       }}>
       <InfoBox
         name={Person.name}

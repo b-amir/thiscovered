@@ -45,8 +45,9 @@
 .tab:hover {
   /* color: #4c4c4cdb; */
 
-  background-color: #948a8a3d;
-  color: var(--text-color-3);
+  /* background-color: #948a8a3d; */
+  background-color: var(--accent-3);
+  /* color: var(--text-color-3); */
 }
 
 .bonus.tab::after {

@@ -27,6 +27,7 @@
   border-top-right-radius: 0.8rem;
   border-top-left-radius: 0.8rem;
   overflow: hidden;
+  cursor: grab;
 }
 
 .grid-info-box {
