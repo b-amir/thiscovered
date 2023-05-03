@@ -343,6 +343,7 @@ h3.description-title {
     width: 150% !important;
     transform-origin: right;
     transform: translateX(-33%);
+    box-sizing: unset;
   }
 
 
