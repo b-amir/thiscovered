@@ -4,6 +4,7 @@ import "./style.css";
 import { hexToRgb } from "../../utils/hexToRgb";
 import useTypingAnimation from "../../hooks/useTypingAnimation";
 import DownloadIcon from "../../../public/assets/DownloadIcon";
+import { downloadImage } from "../../utils/downloadImage";
 
 interface IProps {
   updatePerson: (field: string, value: string) => void;
@@ -29,6 +30,7 @@ export const InfoBoxTab: React.FC<IProps> = ({
   const speed = 30;
   const displayText = useTypingAnimation(text, speed);
   const [showDescription, setShowDescription] = useState(false);
+  const handleDownloadImage = downloadImage();
 
   return (
     <>
@@ -265,14 +267,10 @@ export const InfoBoxTab: React.FC<IProps> = ({
             style={{ display: "flex" }}
             className="cta_button"
             onClick={() => {
-              // handleDownloadClick();
+              handleDownloadImage();
               setShowDescription(true);
               setTimeout(() => {
                 window.scrollTo({
-                  // top: document.querySelector(".grid-tab-description")
-                  //   ?.clientHeight,
-
-                  // scroll 100px up
                   top:
                     document.querySelector(".grid-tab-description")?.offsetTop -
                     189,
