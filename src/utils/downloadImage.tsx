@@ -27,7 +27,8 @@ export function downloadImage() {
         style: {
           transform: "scale(1)",
           transformOrigin: "top left",
-          borderRadius: "0px"
+          borderRadius: "0px",
+          border: "none"
         }
         // filter: (node) => {
         //   if (node.tagName === "style") {
