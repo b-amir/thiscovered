@@ -67,9 +67,9 @@ export const CoverBox: React.FC<IProps> = ({
 
   return (
     <div
-      onClick={() => {
-        handleDownloadImage();
-      }}
+      //   onClick={() => {
+      //     handleDownloadImage();
+      //   }}
       onMouseDown={handleMouseDown}
       onWheel={handleScroll}
       onTouchStart={handleTouchStart}

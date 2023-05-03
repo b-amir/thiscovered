@@ -74,6 +74,7 @@ export const InfoBox: React.FC<InfoBoxProps> = ({
   return (
     <div
       className="grid-info-box"
+      id="infobox"
       style={fullHeight ? FullHeightInfoBoxStyle : InfoBoxStyle}>
       {name.length > 0 && (
         <h2 className="InfoBox_name" style={NameFont}>
