@@ -9,8 +9,7 @@ import { ProfilePic } from "./Components/ProfilePic/ProfilePic";
 import Modal from "./Components/Modal/Modal";
 import useModal from "./hooks/useModal";
 import { createPortal } from "react-dom";
-// import { modalRef } from "./Components/Modal/Modal";
-
+import useSwipe from "./hooks/useSwipe";
 export interface IPerson {
   name: string;
   jobTitle: string;
@@ -94,6 +93,33 @@ export default function App(): JSX.Element {
     }
   };
 
+  const swipeHandlers = useSwipe({
+    onSwipedRight: () => {
+      // setTab to the previous tab
+      if (tab === "about") {
+        setTab("checklist");
+      } else if (tab === "background") {
+        setTab("about");
+      } else if (tab === "infoBox") {
+        setTab("background");
+      } else if (tab === "checklist") {
+        setTab("infoBox");
+      }
+    },
+    onSwipedLeft: () => {
+      // setTab to the next tab
+      if (tab === "about") {
+        setTab("background");
+      } else if (tab === "background") {
+        setTab("infoBox");
+      } else if (tab === "infoBox") {
+        setTab("checklist");
+      } else if (tab === "checklist") {
+        setTab("about");
+      }
+    }
+  });
+
   const updatePerson = (field: string, value: string): void => {
     setPerson({ ...Person, [field]: value });
   };
@@ -109,7 +135,7 @@ export default function App(): JSX.Element {
         toggleTheme={toggleTheme}
         getCurrentTheme={getCurrentTheme}
       />
-      <section className="main">
+      <section className="main" {...swipeHandlers}>
         <CoverBox imageUrl={imageUrl} Person={Person} InfoBoxBG={InfoBoxBG} />
 
         {showPortal &&

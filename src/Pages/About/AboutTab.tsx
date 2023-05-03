@@ -1,5 +1,5 @@
 /* eslint-disable multiline-ternary */
-import React from "react";
+import React, { Fragment } from "react";
 import useTypingAnimation from "../../hooks/useTypingAnimation";
 import "./style.css";
 
