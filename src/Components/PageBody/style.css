@@ -337,12 +337,12 @@ h3.description-title {
 
   .grid-cover-box {
     grid-template-areas: "grid-profile-pic grid-info-box" !important;
-    height: 140px;
+    /* height: 140px; */
     border-bottom: 4px solid var(--border-color) !important;
     border-top: 4px solid var(--border-color) !important;
-    width: 100% !important;
-
-
+    width: 150% !important;
+    transform-origin: right;
+    transform: translateX(-33%);
   }
 
 

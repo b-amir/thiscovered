@@ -28,6 +28,7 @@
   border-top-left-radius: 0.8rem;
   overflow: hidden;
   cursor: grab;
+  justify-items: end;
 }
 
 .grid-info-box {
@@ -38,7 +39,7 @@
   width: clamp(80%, 85%, 95%);
   right: 5%;
   /* padding: 20px; */
-  padding: clamp(5%, 5%, 8%);
+  /* padding: clamp(5%, 5%, 8%); */
   color: white;
   display: flex;
   flex-direction: column;
@@ -50,10 +51,11 @@
   border: 1px solid rgba(103, 116, 116, 0.3);
   overflow: hidden;
   /* flex-wrap: nowrap; */
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   -webkit-user-select: none;
   user-select: none;
+  min-width: 80%;
 }
 
 
@@ -68,6 +70,8 @@ h2.InfoBox_name {
   /* padding: 15px 0px; */
   line-height: 1.2;
   padding: 0 0 8px 0px;
+  white-space: nowrap;
+  margin-bottom: clamp(2px, 6px, 12px);
 }
 
 p.InfoBox_job_title {
@@ -88,4 +92,5 @@ p.InfoBox_email {
   text-shadow: 0px 0px 2px #0000008a;
   /* margin: 20px 10px; */
   line-height: 2.5;
+  margin-top: 2%;
 }

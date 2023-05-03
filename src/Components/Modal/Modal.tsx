@@ -24,11 +24,13 @@ const Modal = ({
             ref={portalContainerRef}
             aria-modal="true">
             <div className="modal-header">
-              {window.innerWidth < 768 ? (
+              {window.innerWidth < 768
+? (
                 <p className="modal-help mobile">
                   Rotate your device to landscape mode, then take a screenshot.
                 </p>
-              ) : (
+              )
+: (
                 <p className="modal-help computer">
                   Now use <code>PRT SC</code> button on your keyboard to capture
                   screenshot.

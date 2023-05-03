@@ -1,11 +1,12 @@
-import React, { useRef, useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+import React, { useEffect } from "react";
 import { InfoBox } from "./InfoBox";
 import { type IPerson, type IInfoBoxBG } from "../../App";
 import "./style.css";
-import { domToPng } from "modern-screenshot";
 import { useDrag } from "../../hooks/useDrag";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import type { Size } from "../../hooks/useWindowSize";
+import domtoimage from "dom-to-image-more";
 
 interface IProps {
   imageUrl: string;
@@ -18,35 +19,6 @@ export const CoverBox: React.FC<IProps> = ({
   Person,
   InfoBoxBG
 }: IProps) => {
-  // const componentRef = useRef();
-  // const printRef = useRef();
-
-  // const handleDownloadImage = async () => {
-  //   await domToPng(document.querySelector("#cover"), {
-  //     quality: 1,
-  //     width: 1584,
-  //     height: 396,
-  //     scale: 2,
-  //     maximumCanvasSize: 1584,
-  //     minimumCanvasSize: 1584,
-  //     style: {
-  //       borderRadius: "0px",
-  //       // display: "flex",
-  //       flexDirection: "row-reverse",
-
-  //       justifyContent: "flex-start",
-  //       alignItems: "flex-start"
-  //     }
-
-  //     // filter: true
-  //   }).then((dataUrl) => {
-  //     const link = document.createElement("a");
-  //     link.download = "screenshot.png";
-  //     link.href = dataUrl;
-  //     link.click();
-  //   });
-  // };
-
   const {
     position,
     handleMouseDown,
@@ -75,7 +47,7 @@ export const CoverBox: React.FC<IProps> = ({
   const size: Size = useWindowSize();
 
   let backgroundsize: string | number;
-  if (size.width < 425) {
+  if (size.width != null && size.width < 425) {
     // for visual porpuses, the mobile version's proportions
     // doesnt follow the usual aspect ratio. hence this trick:
     backgroundsize = "";
@@ -83,11 +55,76 @@ export const CoverBox: React.FC<IProps> = ({
     backgroundsize = `${zoom * 100}%`;
   }
 
+  // use domtoiamge to download the #cover element and all it's children as a png
+
+  // const fetchCSS = async (url) => {
+  //   const response = await fetch(url);
+  //   const cssText = await response.text();
+  //   return cssText;
+  // };
+
+  const handleDownloadImage = (): void => {
+    const coverElement = document.getElementById("cover");
+
+    // to always get the 1584x396 size, regardless of the client's screen size:
+    const standardCoverWidth = 1584;
+    const clientCoverWidth = coverElement?.clientWidth;
+    const scaleFactor = clientCoverWidth
+      ? standardCoverWidth / clientCoverWidth
+      : 1;
+
+    // Fetch the CSS content of the web font
+    // const fontCSSURL =
+    //   "https://fonts.googleapis.com/css2?family=Anton&family=Domine:wght@400;700&family=Fira+Sans+Condensed:wght@300;500;900&family=Fjalla+One&family=Merriweather+Sans:wght@400;800&family=Oleo+Script&family=Pacifico&family=Patua+One&display=swap";
+    // const fontCSSText = await fetchCSS(fontCSSURL);
+
+    if (coverElement) {
+      const aspectRatio = 4 / 1;
+      const width = coverElement.clientWidth;
+      const height = width / aspectRatio;
+
+      const options = {
+        scale: scaleFactor,
+        width,
+        height,
+        style: {
+          transform: "scale(1)",
+          transformOrigin: "top left",
+          borderRadius: "0px"
+        }
+        // filter: (node) => {
+        //   if (node.tagName === "style") {
+        //     const style = document.createElement("style");
+        //     // style.innerHTML = fontCSSText;
+        //     node.parentNode.insertBefore(style, node);
+        //     node.parentNode.removeChild(node);
+        //   }
+        //   return true;
+        // }
+      };
+
+      domtoimage
+        .toBlob(coverElement, options)
+        .then((blob: Blob | MediaSource) => {
+          const link = document.createElement("a");
+          link.download = "linkedin-cover.jpeg";
+          link.href = URL.createObjectURL(blob);
+          link.click();
+        })
+        .catch((error: any) => {
+          console.error("Error generating image:", error);
+        });
+    } else {
+      console.error("Element with id 'cover' not found");
+    }
+  };
+
   return (
     <div
       // ref={printRef}
-      // onClick={() => handleDownloadImage()}
-
+      onClick={() => {
+        handleDownloadImage();
+      }}
       onMouseDown={handleMouseDown}
       onWheel={handleScroll}
       onTouchStart={handleTouchStart}
@@ -102,10 +139,12 @@ export const CoverBox: React.FC<IProps> = ({
         })`,
         backgroundPosition: `${position.x}px ${position.y}px`,
         backgroundRepeat: "no-repeat",
-        width: "100%",
-        height: "100%",
+        //   width: "100%",
+        //  height: "100%",
         backgroundSize: `${backgroundsize}`,
         touchAction: "none"
+        //  width: "1584px",
+        //    height: "396px"
       }}>
       <InfoBox
         name={Person.name}

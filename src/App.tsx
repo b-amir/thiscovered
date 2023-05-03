@@ -94,8 +94,6 @@ export default function App(): JSX.Element {
     }
   };
 
-  // console.log("theme", theme);
-
   const updatePerson = (field: string, value: string): void => {
     setPerson({ ...Person, [field]: value });
   };

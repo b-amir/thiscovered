@@ -85,9 +85,11 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
             onTouchStart={handleCopyLinkClick}
             // onClick={handleCopyLinkClick}
             onMouseDown={handleCopyLinkClick}>
-            {isCopied ? (
+            {isCopied
+? (
               "Link copied"
-            ) : (
+            )
+: (
               <>
                 <CopyIcon /> Share
               </>

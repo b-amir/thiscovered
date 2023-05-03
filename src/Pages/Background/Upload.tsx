@@ -20,7 +20,6 @@ const UploadImage: React.FC<IProps> = ({ setImageUrl }) => {
             type="file"
             name="myImage"
             onChange={(event) => {
-              // console.log(event.target.files[0]);
               if (event.target.files != null && event.target.files[0] != null) {
                 setUploadedImage(event.target.files[0]);
                 setImageUrl(URL.createObjectURL(event.target.files[0]));

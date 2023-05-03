@@ -41,6 +41,8 @@ export const InfoBox: React.FC<InfoBoxProps> = ({
     borderRight: "1px solid transparent",
     borderTop: "1px solid transparent",
     borderBottom: "1px solid transparent",
+    aspectRatio: "4/1",
+    position: "relative",
     transition:
       "top 0s ease-in-out 0s, border 0.2s ease-in-out 0s, right 0.5s ease 0s, height 0.9s cubic-bezier(0.87,-1.47, 0, 2.76) 0.9s, translate 3s ease-in-out 0s, border-radius 0.3s ease-in-out 0s"
   };
@@ -56,6 +58,8 @@ export const InfoBox: React.FC<InfoBoxProps> = ({
     // padding: "55px 35px",
     // justifyContent: "center",
     border: "1px solid rgba(103, 116, 116, 0.3)",
+    aspectRatio: "4/1",
+    position: "relative",
     transition:
       "top 0s ease-in-out 0s, border 3s ease-in-out 0s, height 0.5s cubic-bezier(1.87,-1.47, 0, 2.76) 0.2s, translate 1s ease 0.2s, right 1s ease-in-out 0.1s, border-radius 0.3s ease-in-out 0s"
   };

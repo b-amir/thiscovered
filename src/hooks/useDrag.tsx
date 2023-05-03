@@ -5,7 +5,7 @@ interface Position {
   y: number;
 }
 
-export const useDrag = () => {
+export const useDrag = (): any => {
   const [dragging, setDragging] = useState(false);
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
   const [initialClick, setInitialClick] = useState<Position>({ x: 0, y: 0 });
@@ -41,17 +41,22 @@ export const useDrag = () => {
     },
     [zoom, setZoom]
   );
-  const enableScroll = () => {
+
+  const disableScroll = (): void => {
+    document.addEventListener("wheel", preventDefault, { passive: false });
+    document.addEventListener("mousewheel", preventDefault, { passive: false });
+
+    // after 2 seconds remove the lock on scroll
+    setTimeout(() => {
+      enableScroll();
+    }, 2000);
+  };
+  const enableScroll = (): void => {
     document.removeEventListener("wheel", preventDefault, false);
+    document.removeEventListener("mousewheel", preventDefault, false);
   };
 
-  const disableScroll = () => {
-    document.addEventListener("wheel", preventDefault, {
-      passive: false
-    });
-  };
-
-  function preventDefault(e: any) {
+  function preventDefault(e: any): void {
     e = e || window.event;
     if (e.preventDefault) {
       e.preventDefault();
@@ -77,7 +82,7 @@ export const useDrag = () => {
   );
   const handleTouchMove = useCallback(
     (e: React.TouchEvent) => {
-      if (e.touches.length === 1 && touchPoint1.current) {
+      if (e.touches.length === 1 && touchPoint1.current != null) {
         const touch = e.touches[0];
         setPosition({
           x: touch.clientX - initialClick.x,
@@ -85,8 +90,8 @@ export const useDrag = () => {
         });
       } else if (
         e.touches.length === 2 &&
-        touchPoint1.current &&
-        touchPoint2.current
+        touchPoint1.current != null &&
+        touchPoint2.current != null
       ) {
         const touch1 = e.touches[0];
         const touch2 = e.touches[1];

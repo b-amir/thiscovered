@@ -10,6 +10,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
+
       rules: {
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         // double quotes are allowed in jsx
@@ -23,7 +24,8 @@ module.exports = {
         '@typescript-eslint/indent': ['off', 4],
         '@typescript-eslint/member-delimiter-style': ['off'],
         '@typescript-eslint/space-before-function-paren': ['off'],
-        'react/jsx-no-comment-textnodes': ['off']
+        'react/jsx-no-comment-textnodes': ['off'],
+        '@typescript-eslint/strict-boolean-expressions': 0
       },
 
       parserOptions: {
