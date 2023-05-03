@@ -15,7 +15,7 @@ export default (input: SwipeInput): SwipeOutput => {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
-  const minSwipeDistance = 100;
+  const minSwipeDistance = 130;
 
   const onTouchStart = (e: TouchEvent) => {
     setTouchEnd(0); // otherwise the swipe is fired even with usual touch events

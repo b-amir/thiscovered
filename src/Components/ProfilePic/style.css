@@ -11,6 +11,8 @@ img.glasses {
   top: 0px;
   left: 39px;
   visibility: hidden;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 

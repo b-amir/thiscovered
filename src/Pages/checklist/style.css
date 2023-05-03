@@ -155,6 +155,8 @@ li.checked-list {
   vertical-align: middle;
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .tertiary-button:hover {

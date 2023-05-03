@@ -39,6 +39,8 @@
   padding-right: 1.6rem !important;
   margin-right: 10px;
   cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .cta_button.normal {

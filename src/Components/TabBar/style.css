@@ -17,8 +17,8 @@
 .tab.active {
   display: flex;
   flex-direction: row;
-  background-color: #9db3c869;
-  background-color: var(--accent-3);
+  /* background-color: #9db3c869; */
+  /* background-color: var(--accent-3); */
   /* padding: 4px 28px; */
   align-items: center;
   /* border-radius: 22px; */
@@ -40,13 +40,15 @@
   transition: all 0.3s ease-in-out;
   min-width: 130px;
   justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .tab:hover {
   /* color: #4c4c4cdb; */
 
   /* background-color: #948a8a3d; */
-  background-color: var(--accent-3);
+  /* background-color: var(--accent-3); */
   /* color: var(--text-color-3); */
 }
 
@@ -97,4 +99,18 @@
   .bonus.tab::after {
     display: none;
   }
+}
+
+
+.grid-tab-bar .marker {
+  left: 0;
+  position: absolute;
+  height: 45px;
+  width: 0;
+  background: #000;
+  border-radius: 4px;
+  transition: 0.3s;
+  /* z-index: -5; */
+  border-radius: 25px;
+  background-color: var(--accent-3);
 }
