@@ -7,7 +7,7 @@
 ## What is it?
 **this.covered** is a web application designed to help LinkedIn users create standout cover photos for their profiles. With this tool, users can easily find and customize an image from the Unsplash API or upload their own image. They can then add a small box containing their personal information, making their profile more memorable to potential connections.
 
-[Try it Live!](https://theamirm.github.io/thiscovered/)
+[Try it Live!](https://b-amir.github.io/thiscovered/)
 
 
 
@@ -17,7 +17,7 @@ In addition to the cover photo editor, this.covered also includes a bonus featur
 
 
 ## Usage
-To use this.covered, simply [visit the website](https://theamirm.github.io/thiscovered/) and follow the instructions step by step.
+To use this.covered, simply [visit the website](https://b-amir.github.io/thiscovered/) and follow the instructions step by step.
 
 
 ## Features
