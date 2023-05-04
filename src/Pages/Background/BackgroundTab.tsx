@@ -24,6 +24,14 @@ export const BackgroundTab: React.FC<IProps> = ({
   const [PrivateApiOn, setPrivateApiOn] = React.useState(false);
   const [query, setQuery] = useState("");
 
+  function resetImagePosition(): void {
+    // find #cover dom element and revert its background-position to center
+    const cover = document.getElementById("cover");
+    if (cover) {
+      cover.style.backgroundPosition = "center";
+    }
+  }
+
   return (
     <>
       <div className="grid-tab-info">
@@ -64,6 +72,7 @@ export const BackgroundTab: React.FC<IProps> = ({
                 setImageUrl={setImageUrl}
                 query={query}
                 setQuery={setQuery}
+                resetImagePosition={resetImagePosition}
               />
             ) : (
               <LooseSearch
@@ -71,6 +80,7 @@ export const BackgroundTab: React.FC<IProps> = ({
                 imageUrl={imageUrl}
                 query={query}
                 setQuery={setQuery}
+                resetImagePosition={resetImagePosition}
               />
             )}
 
@@ -102,7 +112,10 @@ export const BackgroundTab: React.FC<IProps> = ({
         <div className="grid-control-col grid-col-2">
           <h4>Or bring your own</h4>
           <div className="inner-control-col">
-            <UploadImage setImageUrl={setImageUrl} />
+            <UploadImage
+              setImageUrl={setImageUrl}
+              resetImagePosition={resetImagePosition}
+            />
           </div>
         </div>
         {/* </div>

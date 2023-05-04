@@ -3,8 +3,9 @@ import React, { useState } from "react";
 
 interface IProps {
   setImageUrl: React.Dispatch<React.SetStateAction<string>>;
+  resetImagePosition: () => void;
 }
-const UploadImage: React.FC<IProps> = ({ setImageUrl }) => {
+const UploadImage: React.FC<IProps> = ({ setImageUrl, resetImagePosition }) => {
   const [uploadedImage, setUploadedImage] = useState<File | null>(null);
 
   return (
@@ -23,7 +24,7 @@ const UploadImage: React.FC<IProps> = ({ setImageUrl }) => {
               if (event.target.files != null && event.target.files[0] != null) {
                 setUploadedImage(event.target.files[0]);
                 setImageUrl(URL.createObjectURL(event.target.files[0]));
-                // setImageUrl(URL.createObjectURL(uploadedImage));
+                resetImagePosition();
               }
             }}
           />{" "}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 
 export interface IProps {
@@ -12,9 +12,11 @@ export const TabBar: React.FC<IProps> = ({ tab, setTab }: IProps) => {
     // const tabs = document.querySelectorAll(".tab");
     const activeTab = document.querySelector(".tab.active");
 
-    function indicator(e): void {
-      marker.style.left = e.offsetLeft + "px";
-      marker.style.width = e.offsetWidth + "px";
+    function indicator(e: Element | null): void {
+      if (marker !== null) {
+        marker.style.left = e.offsetLeft + "px";
+        marker.style.width = e.offsetWidth + "px";
+      }
     }
 
     indicator(activeTab);

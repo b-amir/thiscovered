@@ -15,11 +15,13 @@ interface ImageSearchProps {
   setImageUrl: React.Dispatch<React.SetStateAction<string>>;
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
+  resetImagePosition: () => void;
 }
 
 const ImageSearch: React.FC<ImageSearchProps> = ({
   query,
   setQuery,
+  resetImagePosition,
   setImageUrl
 }: ImageSearchProps) => {
   const [loading, setLoading] = useState(false);
@@ -42,13 +44,19 @@ const ImageSearch: React.FC<ImageSearchProps> = ({
           throw new Error(response.statusText);
         }
         return await response.json();
+        // return await response.blob();
       })
-      .then((data) => {
+      .then(async (data) => {
         setData(data);
-        setImageUrl(data.urls.regular);
+        const blob = fetch(data.urls.regular).then((r) => r.blob());
+        const objectUrlPromise = blob.then((blob) => URL.createObjectURL(blob));
+        const objectUrl = await objectUrlPromise;
+        setImageUrl(objectUrl);
+        resetImagePosition();
         setError(null);
         setLoading(false);
       })
+
       .catch((error) => {
         setData(null);
         setError(error);

@@ -8,6 +8,7 @@ interface LooseSearchProps {
   imageUrl: string;
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
+  resetImagePosition: () => void;
 }
 interface UnsplashImage {
   user: any;
@@ -21,6 +22,7 @@ export const LooseSearch: React.FC<LooseSearchProps> = ({
   imageUrl,
   setImageUrl,
   query,
+  resetImagePosition,
   setQuery
 }: LooseSearchProps) => {
   const [loading, setLoading] = useState(false);
@@ -47,6 +49,7 @@ export const LooseSearch: React.FC<LooseSearchProps> = ({
 
         // update the imageUrl state
         setImageUrl(objectUrl);
+        resetImagePosition();
         setData(objectUrl);
       })
       .catch((error) => {

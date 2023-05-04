@@ -11,10 +11,6 @@ export function downloadImage() {
       ? standardCoverWidth / clientCoverWidth
       : 1;
 
-    // Fetch the CSS content of the web font
-    // const fontCSSURL =
-    //   "https://fonts.googleapis.com/css2?family=Anton&family=Domine:wght@400;700&family=Fira+Sans+Condensed:wght@300;500;900&family=Fjalla+One&family=Merriweather+Sans:wght@400;800&family=Oleo+Script&family=Pacifico&family=Patua+One&display=swap";
-    // const fontCSSText = await fetchCSS(fontCSSURL);
     if (coverElement) {
       const aspectRatio = 4 / 1;
       const width = coverElement.clientWidth;
@@ -39,15 +35,6 @@ export function downloadImage() {
           borderRadius: "0px",
           border: "none"
         }
-        // filter: (node) => {
-        //   if (node.tagName === "style") {
-        //     const style = document.createElement("style");
-        //     // style.innerHTML = fontCSSText;
-        //     node.parentNode.insertBefore(style, node);
-        //     node.parentNode.removeChild(node);
-        //   }
-        //   return true;
-        // }
       };
 
       domtoimage

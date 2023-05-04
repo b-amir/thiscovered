@@ -6,7 +6,6 @@ import "./style.css";
 import { useDrag } from "../../hooks/useDrag";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import type { Size } from "../../hooks/useWindowSize";
-import { downloadImage } from "../../utils/downloadImage";
 
 interface IProps {
   imageUrl: string;
@@ -55,21 +54,8 @@ export const CoverBox: React.FC<IProps> = ({
     backgroundsize = `${zoom * 100}%`;
   }
 
-  // use domtoiamge to download the #cover element and all it's children as a png
-
-  // const fetchCSS = async (url) => {
-  //   const response = await fetch(url);
-  //   const cssText = await response.text();
-  //   return cssText;
-  // };
-
-  const handleDownloadImage = downloadImage();
-
   return (
     <div
-      //   onClick={() => {
-      //     handleDownloadImage();
-      //   }}
       onMouseDown={handleMouseDown}
       onWheel={handleScroll}
       onTouchStart={handleTouchStart}
