@@ -52,7 +52,7 @@
     --bg-main: #17191a;
     --bg-2: #302a211c;
     --bg-3: #2c2f314d;
-    --bg-form: #121313a1;
+    --bg-form: #0e0e0eb8;
     --bg-button: #292929;
 
     --text-color: #cdcdcd;
@@ -112,7 +112,7 @@
   --bg-main: #17191a;
   --bg-2: #302a211c;
   --bg-3: #2c2f314d;
-  --bg-form: #121313a1;
+  --bg-form: #0e0e0eb8;
   --bg-button: #292929;
 
   --text-color: #cdcdcd;
@@ -227,7 +227,7 @@ input[type="email"] {
   /* min-width: 95%; */
   min-width: 315px;
   min-height: 50px;
-
+  box-shadow: 0px 0px 20px -17px black;
 }
 
 

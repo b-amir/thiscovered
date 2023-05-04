@@ -76,20 +76,21 @@ h2.InfoBox_name {
 
 p.InfoBox_job_title {
   font-weight: 500;
-  background: #ffffff;
-  padding: 8px 26px;
+  background: #fffffff5;
+  padding: 10px 26px 8px;
   border-radius: 11px;
   text-transform: capitalize;
   color: #000000d1;
   text-align: center;
-  margin: 0;
+  line-height: 1.4;
+  box-shadow: 0px 1.5px 1.3px -15px rgba(0, 0, 0, 0.028), 0px 3.7px 4px -15px rgba(0, 0, 0, 0.04), 0px 7px 9.1px -15px rgba(0, 0, 0, 0.05), 0px 12.5px 18.7px -15px rgba(0, 0, 0, 0.06), 0px 23.4px 38.7px -15px rgba(0, 0, 0, 0.072), 0px 56px 99px -15px rgba(0, 0, 0, 0.1);
 }
 
 p.InfoBox_email {
-  font-weight: 800;
+  font-weight: 500;
   color: #efefef;
-  font-size: smaller;
-  text-shadow: 0px 0px 2px #0000008a;
+  font-size: larger;
+  text-shadow: 0px 0px 4px #0000008a;
   /* margin: 20px 10px; */
   line-height: 2.5;
   margin-top: 2%;

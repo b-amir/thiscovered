@@ -18,6 +18,7 @@ div#cover {
   /* height: 396px; */
   width: 95%;
   /* margin: 40px; */
+  max-width: 1584px;
 }
 
 .modal-overlay {
