@@ -1,6 +1,6 @@
 # this.covered
 
-![Cover Image](https://i.imgur.com/EH0ae8Z.png)
+![Cover Image](https://i.imgur.com/VWM45MI.png)
 
 
 
