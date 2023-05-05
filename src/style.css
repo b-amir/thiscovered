@@ -227,7 +227,7 @@ input[type="email"] {
   /* min-width: 95%; */
   min-width: 315px;
   min-height: 50px;
-  box-shadow: 0px 0px 20px -17px black;
+  box-shadow: 0px 0px 20px -17px #000000ab;
 }
 
 
