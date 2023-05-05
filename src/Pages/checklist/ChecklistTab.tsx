@@ -50,7 +50,7 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
           improvements, please feel free to{" "}
           <a
             className="description-link"
-            href="https://github.com/theamirm/thiscovered"
+            href="https://github.com/b-amir/thiscovered"
             target="_blank"
             rel="noopener noreferrer">
             contribute on GitHub
@@ -85,11 +85,9 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
             onTouchStart={handleCopyLinkClick}
             // onClick={handleCopyLinkClick}
             onMouseDown={handleCopyLinkClick}>
-            {isCopied
-? (
+            {isCopied ? (
               "Link copied"
-            )
-: (
+            ) : (
               <>
                 <CopyIcon /> Share
               </>

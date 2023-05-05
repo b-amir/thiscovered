@@ -617,14 +617,15 @@ p.control-tip {
     overflow: hidden;
     box-sizing: border-box !important;
     width: 97% !important;
+    border-top: 1px solid var(--border-color-2);
 
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 70px 140px 120px auto auto 150px;
+    grid-template-rows: auto 140px 120px auto auto 150px;
 
     grid-auto-flow: row;
     grid-template-areas:
-      "grid-divider grid-divider grid-divider grid-divider"
+      ". . . ."
       "grid-cover-box grid-cover-box grid-cover-box grid-cover-box"
       "grid-tab-info grid-tab-info grid-tab-info grid-tab-info"
       "grid-tab-control-box grid-tab-control-box grid-tab-control-box grid-tab-control-box"

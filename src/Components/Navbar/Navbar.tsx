@@ -14,6 +14,7 @@ export const Navbar: React.FC<IProps> = ({
   return (
     <nav className="navbar">
       <h1
+        className="logo"
         onClick={() => {
           setTab("about");
 
