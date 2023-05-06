@@ -11,19 +11,19 @@ interface UnsplashImage {
   alt_description: string;
 }
 
-interface ImageSearchProps {
+interface IProps {
   setImageUrl: React.Dispatch<React.SetStateAction<string>>;
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
   resetImagePosition: () => void;
 }
 
-const ImageSearch: React.FC<ImageSearchProps> = ({
+const ExactImageSearch: React.FC<IProps> = ({
   query,
   setQuery,
   resetImagePosition,
   setImageUrl
-}: ImageSearchProps) => {
+}: IProps) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<UnsplashImage | null>(null);
   const [error, setError] = useState<Error | null>(null);
@@ -44,7 +44,6 @@ const ImageSearch: React.FC<ImageSearchProps> = ({
           throw new Error(response.statusText);
         }
         return await response.json();
-        // return await response.blob();
       })
       .then(async (data) => {
         setData(data);
@@ -114,4 +113,4 @@ const ImageSearch: React.FC<ImageSearchProps> = ({
   );
 };
 
-export default ImageSearch;
+export default ExactImageSearch;

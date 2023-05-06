@@ -1,14 +1,12 @@
+/* eslint-disable multiline-ternary */
 import React from "react";
-// import { CoverBox } from "../CoverBox";
 import { createPortal } from "react-dom";
-import "./style.css";
 
 interface IProps {
   visibleModal: boolean;
   toggleModal: () => void;
   portalContainerRef: React.RefObject<HTMLDivElement>;
 }
-// export const modalRef = useRef<HTMLDivElement>(null);
 const Modal = ({
   visibleModal,
   toggleModal,
@@ -24,19 +22,16 @@ const Modal = ({
             ref={portalContainerRef}
             aria-modal="true">
             <div className="modal-header">
-              {window.innerWidth < 768
-? (
+              {window.innerWidth < 768 ? (
                 <p className="modal-help mobile">
                   Rotate your device to landscape mode, then take a screenshot.
                 </p>
-              )
-: (
+              ) : (
                 <p className="modal-help computer">
                   Now use <code>PRT SC</code> button on your keyboard to capture
                   screenshot.
                 </p>
               )}
-
               <button
                 className="modal-close"
                 type="button"

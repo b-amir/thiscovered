@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
 import React, { useEffect } from "react";
-import "./style.css";
 
 export interface IProps {
   tab: string;
@@ -9,7 +9,6 @@ export interface IProps {
 export const TabBar: React.FC<IProps> = ({ tab, setTab }: IProps) => {
   useEffect(() => {
     const marker = document.querySelector(".marker");
-    // const tabs = document.querySelectorAll(".tab");
     const activeTab = document.querySelector(".tab.active");
 
     function indicator(e: Element | null): void {
@@ -28,9 +27,7 @@ export const TabBar: React.FC<IProps> = ({ tab, setTab }: IProps) => {
   }, [tab]);
 
   return (
-    <div
-      // className="tabs"
-      className="grid-tab-bar">
+    <div className="grid-tab-bar">
       <div className="marker" />
       <div
         className={tab === "about" ? "tab active" : "tab"}

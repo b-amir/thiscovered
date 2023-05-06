@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  /* align-items: center; */
-  /* margin: 0 auto; */
   margin: 20px 2px;
 }
 
@@ -57,79 +55,6 @@ button.cta_button:hover {
   color: white;
 }
 
-
-.grid-tab-info {
-  display: grid;
-
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.4fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "grid-tab-title grid-tab-title grid-tab-title"
-    "grid-tab-subtitle grid-tab-subtitle grid-tab-subtitle";
-  grid-area: grid-tab-info;
-
-  position: relative;
-  padding: 0 0px 0 40px;
-  /* left: 40px; */
-  /* top: 15px; */
-  /* bottom: 0px; */
-  /* height: 100px; */
-  justify-items: start;
-  justify-content: start;
-  align-items: end;
-}
-
-.grid-tab-title {
-  grid-area: grid-tab-title;
-
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.25;
-  margin: 12px 0 6px 0;
-}
-
-
-.grid-tab-subtitle {
-  grid-area: grid-tab-subtitle;
-
-  font-size: 16px;
-  font-weight: 400;
-  margin: unset;
-}
-
-.grid-tab-description {
-  grid-area: grid-tab-description;
-  margin: 35px 36px 0;
-  padding: 60px;
-  border: 1px solid var(--border-color-2);
-  font-size: 14px;
-  border-radius: 12px;
-  background-color: var(--bg-3);
-  line-height: 25px;
-  /* max-width: 750px; */
-  /* margin: 60px auto 30px; */
-}
-
-h3.description-title {
-  margin: 0;
-  margin-bottom: 30px;
-  color: #747474;
-}
-
-.grid-tab-description p {
-  margin-left: 25px;
-  margin-top: 20px;
-}
-
-.description-link {
-  color: #0a66c2;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-
 .grid-tab-control-box {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -144,13 +69,11 @@ h3.description-title {
 .grid-col-1 {
   grid-area: grid-col-1;
   padding: 0px 15px;
-
 }
 
 .grid-col-2 {
   grid-area: grid-col-2;
   padding: 0px 15px;
-
 }
 
 .inner-control-col {
@@ -168,17 +91,7 @@ h3.description-title {
   justify-items: start;
 }
 
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 768px) and (max-width:950px) {
-
   * {
     box-sizing: border-box;
     margin: 0px;
@@ -187,22 +100,14 @@ h3.description-title {
   .main {
     width: 100vw;
     border-radius: 0;
-
   }
 
   .grid-cover-box {
     border-radius: 0px !important;
   }
-
 }
 
-
-
-
-
-
 @media only screen and (max-width: 768px) {
-
   * {
     box-sizing: border-box;
     margin: 0px;
@@ -211,7 +116,6 @@ h3.description-title {
   .main {
     width: 100vw;
     border-radius: 0;
-
   }
 
   .navbar {
@@ -230,61 +134,22 @@ h3.description-title {
 
   .grid-cover-box {
     border-radius: 0px;
-    /* height: 200px; */
-
   }
 
   .grid-tab-bar {
     grid-area: grid-tab-bar;
     top: 40px !important;
     left: -60px;
-    /* margin: 0px -60px; */
     font-size: smaller;
     width: calc(100% + 60px);
-
   }
 
   .grid-tab-bar .tab {
-    /* padding: 0 10px 0 10px; */
-    /* margin: 0 1px 0 0px; */
     min-width: 70px !important;
     white-space: nowrap;
   }
 
-
-  .grid-tab-info {
-    padding: 0 30px 0 30px;
-    /* left: 15px; */
-    /* top: 15px; */
-    /* bottom: 0px; */
-    /* height: 100px; */
-  }
-
-  .grid-tab-title {
-    font-size: 20px;
-    margin: 12px 0 6px 0;
-  }
-
-  .grid-tab-subtitle {
-    font-size: 14px;
-    margin: unset;
-  }
-
-  .grid-tab-description {
-    margin: 35px 30px 0 30px;
-    padding: 25px;
-    border: 1px solid #0000002b;
-    font-size: 14px;
-    border-radius: 12px;
-    /* max-width: 530px; */
-    background: #e7e2dc1c;
-    /* width: 80%; */
-    line-height: 25px;
-  }
-
   .grid-tab-control-box {
-    /* make grids suitable for mobile  */
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -293,7 +158,6 @@ h3.description-title {
     grid-template-areas: "grid-col-1" "grid-col-2";
     grid-area: grid-tab-control-box;
     padding: 0px 40px;
-
   }
 
   .grid-control-col {
@@ -311,25 +175,11 @@ h3.description-title {
   }
 
   .cta_button {
-    /* width: 100%; */
-    /* margin: 0px; */
     font-size: smaller;
-    /* padding: 1px 4px; */
-    /* width: 10px; */
   }
-
-
-
-
-
-
-
 }
 
-/* 425 query */
 @media only screen and (max-width: 425px) {
-
-
   .grid-divider {
     z-index: 50 !important;
     display: grid;
@@ -347,27 +197,18 @@ h3.description-title {
 
   .grid-cover-box {
     grid-template-areas: "grid-profile-pic grid-info-box" !important;
-    /* height: 140px; */
     border-bottom: 4px solid var(--border-color) !important;
-    /* border-top: 4px solid var(--border-color) !important; */
     width: 150% !important;
     transform-origin: right;
     transform: translateX(-33%);
     box-sizing: unset;
   }
 
-
   .grid-tab-bar {
     top: 1px !important;
-    /* left: -20px; */
     font-size: smaller;
-    /* min-width: 100% !important; */
     overflow-x: overlay !important;
     overflow-y: hidden;
-    /* position: unset !important; */
-    /* height: 70px !important; */
-    /* width: -moz-fit-content; */
-    /* width: fit-content; */
     width: 95% !important;
     left: 50%;
     transform: translateX(-50%);
@@ -376,37 +217,21 @@ h3.description-title {
     align-items: center !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    /* box-shadow: inset 0px 5px 8px 0px var(--shadow-color-2); */
-
   }
 
   .grid-tab-bar .tab {
     padding: 9px 15px;
-    /* margin: 0 1px 0 0px; */
     min-width: revert !important;
     white-space: nowrap;
     font-size: 13px;
     -webkit-user-select: none;
     user-select: none;
   }
-
-
-  h3.description-title {
-    margin: 0;
-    margin-bottom: 00px;
-    color: #747474;
-  }
-
-
 }
 
 @media only screen and (max-width: 388px) {
-
   .grid-tab-bar .tab {
     padding: 5px 8px;
-    /* background: none !important; */
     font-size: smaller;
   }
-
-
 }

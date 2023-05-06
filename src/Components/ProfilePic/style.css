@@ -1,6 +1,19 @@
 .grid-profile-pic {
   grid-area: grid-profile-pic;
   z-index: 2;
+
+  background-image: url(./assets/defaultPP.svg);
+  position: relative;
+  top: -25px;
+  left: 30px;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 4px solid var(--border-color-pp);
+  filter: drop-shadow(0px 0px 2px #00000030) var(--filter-pp);
 }
 
 img.glasses {
@@ -15,14 +28,12 @@ img.glasses {
   user-select: none;
 }
 
-
 .grid-profile-pic:hover img.glasses {
   top: 36px;
   visibility: visible;
   transition: 0.9s all ease;
 }
 
-/* media queries for 768 and 425 */
 @media screen and (max-width: 768px) {
   .grid-profile-pic {
     grid-area: grid-profile-pic;
@@ -47,7 +58,6 @@ img.glasses {
     user-select: none;
   }
 
-
   .grid-profile-pic:hover img.glasses {
     top: 25px;
     left: 33px;
@@ -59,17 +69,12 @@ img.glasses {
 }
 
 @media screen and (max-width: 425px) {
-
   .grid-cover-box {
-
     grid-template-areas: "grid-profile-pic grid-info-box" !important;
-
   }
-
 
   .grid-profile-pic {
     grid-area: grid-profile-pic;
-    /* grid-area: grid-cover-box; */
     z-index: 2;
     width: 100px !important;
     height: 100px !important;
@@ -86,6 +91,5 @@ img.glasses {
     position: relative;
     top: 15px !important;
     left: 22px !important;
-    /* visibility: hidden; */
   }
 }

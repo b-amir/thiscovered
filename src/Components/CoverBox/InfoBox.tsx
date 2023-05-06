@@ -1,9 +1,6 @@
 import React from "react";
-import "../../style.css";
-// import { BackgroundTab } from "../../Pages/Background/BackgroundTab";
-// import { hexToRgb } from "../../utils/hexToRgb";
 
-interface InfoBoxProps {
+interface IProps {
   name: string;
   jobTitle: string;
   email: string;
@@ -17,24 +14,21 @@ interface InfoBoxProps {
   shadow: boolean;
 }
 
-export const InfoBox: React.FC<InfoBoxProps> = ({
+export const InfoBox: React.FC<IProps> = ({
   name,
   jobTitle,
   email,
   fontColor,
-  hexBackgroundColor,
   rgbaBackgroundColor,
   borderRadius,
   shadow,
   font,
-  alpha,
   fullHeight
-}: InfoBoxProps) => {
+}: IProps) => {
   const FullHeightInfoBoxStyle = {
     backgroundColor: rgbaBackgroundColor,
     borderRadius: 0,
     height: "100%",
-
     transform: "translateY(0%)",
     top: 0,
     right: 0,
@@ -53,10 +47,6 @@ export const InfoBox: React.FC<InfoBoxProps> = ({
     borderRadius: `${borderRadius}` + "px",
     top: "50%",
     transform: "translateY(-50%)",
-    // right: "40px",
-    // display: "flex",
-    // padding: "55px 35px",
-    // justifyContent: "center",
     border: "1px solid rgba(103, 116, 116, 0.3)",
     aspectRatio: "4/1",
     position: "relative",

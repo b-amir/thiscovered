@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import UploadImage from "./Upload";
 import useTypingAnimation from "../../hooks/useTypingAnimation";
-import ImageSearch from "./ImageSearch";
-import "./style.css";
-import { LooseSearch } from "./LooseSearch";
+import ExactImageSearch from "./ExactImageSearch";
+import { LooseImageSearch } from "./LooseImageSearch";
+import { DescriptionBox } from "../../Components/DescriptionBox";
+import { PageTitle } from "../../Components/PageTitle";
+import { ButtonRow } from "../../Components/ButtonRow";
 
 interface IProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
@@ -19,7 +21,7 @@ export const BackgroundTab: React.FC<IProps> = ({
 }: IProps) => {
   const text = "Shall we start by finding you a suitable background image?";
   const speed = 30;
-  const displayText = useTypingAnimation(text, speed);
+  const animatedSubtitle = useTypingAnimation(text, speed);
 
   const [PrivateApiOn, setPrivateApiOn] = React.useState(false);
   const [query, setQuery] = useState("");
@@ -34,13 +36,9 @@ export const BackgroundTab: React.FC<IProps> = ({
 
   return (
     <>
-      <div className="grid-tab-info">
-        <div className="grid-tab-title">A nice image</div>
+      <PageTitle title="A nice image" subtitle={animatedSubtitle} />
 
-        <div className="grid-tab-subtitle">{displayText}</div>
-      </div>
-      <div className="grid-tab-description">
-        <h3 className="description-title">How to use it?</h3>
+      <DescriptionBox title="How to use it?">
         <p>
           You&apos;re given three options to find an image: <br />
           <br />
@@ -61,21 +59,21 @@ export const BackgroundTab: React.FC<IProps> = ({
           <strong>3. Your own image</strong> - Upload an image from your
           computer.
         </p>
-      </div>
+      </DescriptionBox>
 
       <div className="grid-tab-control-box background-tab">
         <div className="grid-control-col grid-col-1">
           <h4>Find an image</h4>
           <div className="inner-control-col">
             {PrivateApiOn ? (
-              <ImageSearch
+              <ExactImageSearch
                 setImageUrl={setImageUrl}
                 query={query}
                 setQuery={setQuery}
                 resetImagePosition={resetImagePosition}
               />
             ) : (
-              <LooseSearch
+              <LooseImageSearch
                 setImageUrl={setImageUrl}
                 imageUrl={imageUrl}
                 query={query}
@@ -118,19 +116,14 @@ export const BackgroundTab: React.FC<IProps> = ({
             />
           </div>
         </div>
-        {/* </div>
-        </div> */}
       </div>
 
-      <div className="grid-button-row">
-        <div className="grid-button-back"></div>
-        <div className="grid-button-middle"></div>
-        <div className="grid-button-forward">
+      <ButtonRow
+        rightButton={
           <button
             className="cta_button"
             onClick={() => {
               setTab("infoBox");
-
               window.scrollTo({
                 top: document.querySelector(".grid-tab-bar")?.clientHeight,
                 behavior: "smooth"
@@ -138,8 +131,8 @@ export const BackgroundTab: React.FC<IProps> = ({
             }}>
             Next Step
           </button>
-        </div>
-      </div>
+        }
+      />
     </>
   );
 };

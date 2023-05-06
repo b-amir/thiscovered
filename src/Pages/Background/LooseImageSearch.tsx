@@ -3,7 +3,7 @@ import FindIcon from "../../../public/assets/FindIcon";
 import ShuffleIcon from "../../../public/assets/ShuffleIcon";
 import Spinner from "../../../public/assets/Spinner";
 
-interface LooseSearchProps {
+interface IProps {
   setImageUrl: React.Dispatch<React.SetStateAction<string>>;
   imageUrl: string;
   query: string;
@@ -18,13 +18,12 @@ interface UnsplashImage {
   alt_description: string;
 }
 
-export const LooseSearch: React.FC<LooseSearchProps> = ({
-  imageUrl,
+export const LooseImageSearch: React.FC<IProps> = ({
   setImageUrl,
   query,
   resetImagePosition,
   setQuery
-}: LooseSearchProps) => {
+}: IProps) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<UnsplashImage | null>(null);
   const [error, setError] = useState<Error | null>(null);
@@ -39,7 +38,6 @@ export const LooseSearch: React.FC<LooseSearchProps> = ({
         if (!response.ok) {
           throw new Error(response.statusText);
         }
-
         return await response.blob();
       })
       .then((blob: Blob) => {

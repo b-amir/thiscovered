@@ -1,30 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./style.css";
-import { PageBody } from "./Components/PageBody/PageBody";
-import { Navbar } from "./Components/Navbar/Navbar";
-import { CoverBox } from "./Components/CoverBox/CoverBox";
-import { TabBar } from "./Components/TabBar/TabBar";
-import { Footer } from "./Components/Footer/Footer";
-import { ProfilePic } from "./Components/ProfilePic/ProfilePic";
-import Modal from "./Components/Modal/Modal";
+import { PageBody } from "./Components/PageBody";
+import { Navbar } from "./Components/Navbar";
+import { CoverBox } from "./Components/CoverBox";
+import { TabBar } from "./Components/TabBar";
+import { Footer } from "./Components/Footer";
+import { ProfilePic } from "./Components/ProfilePic";
+import Modal from "./Components/Modal";
 import useModal from "./hooks/useModal";
 import { createPortal } from "react-dom";
-import useSwipe from "./hooks/useSwipe";
-export interface IPerson {
-  name: string;
-  jobTitle: string;
-  email: string;
-  font: string;
-  fontColor: string;
-  shadow: boolean;
-}
-export interface IInfoBoxBG {
-  hexBackgroundColor: string;
-  rgbaBackgroundColor: string;
-  borderRadius: number;
-  alpha: number;
-  fullHeight: boolean;
-}
+import { type IPerson } from "./types/IPerson";
+import { type IInfoBoxBG } from "./types/IInfoBoxBG";
+import { handleSwipe } from "./utils/handleSwipe";
+import { handleThemeToggle } from "./utils/handleThemeToggle";
+import { handleGetCurrentTheme } from "./utils/handleGetCurrentTheme";
 
 export default function App(): JSX.Element {
   const [tab, setTab] = useState<string>(
@@ -69,56 +58,9 @@ export default function App(): JSX.Element {
     document.documentElement.setAttribute("color-scheme", currentTheme);
   }, []);
 
-  const getCurrentTheme = (): "dark" | "light" | "system" => {
-    if (theme === "system") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    } else {
-      return theme;
-    }
-  };
-
-  const toggleTheme = (): void => {
-    const currentTheme = getCurrentTheme();
-    if (currentTheme === "dark") {
-      setTheme("light");
-      document.documentElement.setAttribute("color-scheme", "light");
-      localStorage.setItem("theme", "light");
-    }
-    if (currentTheme === "light") {
-      setTheme("dark");
-      document.documentElement.setAttribute("color-scheme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
-  };
-
-  const swipeHandlers = useSwipe({
-    onSwipedRight: () => {
-      // setTab to the previous tab
-      if (tab === "about") {
-        setTab("checklist");
-      } else if (tab === "background") {
-        setTab("about");
-      } else if (tab === "infoBox") {
-        setTab("background");
-      } else if (tab === "checklist") {
-        setTab("infoBox");
-      }
-    },
-    onSwipedLeft: () => {
-      // setTab to the next tab
-      if (tab === "about") {
-        setTab("background");
-      } else if (tab === "background") {
-        setTab("infoBox");
-      } else if (tab === "infoBox") {
-        setTab("checklist");
-      } else if (tab === "checklist") {
-        setTab("about");
-      }
-    }
-  });
+  const getCurrentTheme = handleGetCurrentTheme(theme);
+  const toggleTheme = handleThemeToggle(getCurrentTheme, setTheme);
+  const swipeHandlers = handleSwipe(tab, setTab);
 
   const updatePerson = (field: string, value: string): void => {
     setPerson({ ...Person, [field]: value });
@@ -170,7 +112,6 @@ export default function App(): JSX.Element {
           setPerson={setPerson}
           toggleModal={toggleModal}
         />
-        {/* </div> */}
       </section>
       <Footer />
     </>

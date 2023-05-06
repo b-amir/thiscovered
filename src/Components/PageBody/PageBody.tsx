@@ -1,10 +1,10 @@
 import React from "react";
-import { type IInfoBoxBG, type IPerson } from "../../App";
-import { AboutTab } from "../../Pages/About/AboutTab";
-import { InfoBoxTab } from "../../Pages/InfoBox/InfoBoxTab";
-import { BackgroundTab } from "../../Pages/Background/BackgroundTab";
-import { ChecklistTab } from "../../Pages/checklist/ChecklistTab";
-import "./style.css";
+import { type IInfoBoxBG } from "../../types/IInfoBoxBG";
+import { type IPerson } from "../../types/IPerson";
+import { AboutTab } from "../../Pages/About";
+import { InfoBoxTab } from "../../Pages/InfoBox";
+import { BackgroundTab } from "../../Pages/Background";
+import { ChecklistTab } from "../../Pages/Checklist";
 
 interface IProps {
   tab: string;

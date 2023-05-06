@@ -6,7 +6,7 @@ const useTypingAnimation = (
   speed: number,
   delay = 0
 ): any => {
-  const [displayText, setDisplayText] = useState("");
+  const [animatedSubtitle, setDisplayText] = useState("");
 
   useEffect(() => {
     // type: timeout
@@ -31,7 +31,7 @@ const useTypingAnimation = (
     };
   }, [text, speed, delay]);
 
-  return displayText;
+  return animatedSubtitle;
 };
 
 export default useTypingAnimation;

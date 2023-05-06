@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React, { useEffect } from "react";
 import { InfoBox } from "./InfoBox";
-import { type IPerson, type IInfoBoxBG } from "../../App";
-import "./style.css";
+import { type IInfoBoxBG } from "../../types/IInfoBoxBG";
+import { type IPerson } from "../../types/IPerson";
 import { useDrag } from "../../hooks/useDrag";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import type { Size } from "../../hooks/useWindowSize";
@@ -70,12 +70,8 @@ export const CoverBox: React.FC<IProps> = ({
         })`,
         backgroundPosition: `${position.x}px ${position.y}px`,
         backgroundRepeat: "no-repeat",
-        //   width: "100%",
-        //  height: "100%",
         backgroundSize: `${backgroundsize}`,
         touchAction: "none"
-        //  width: "1584px",
-        //    height: "396px"
       }}>
       <InfoBox
         name={Person.name}

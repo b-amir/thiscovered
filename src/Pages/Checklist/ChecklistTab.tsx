@@ -1,28 +1,21 @@
+/* eslint-disable multiline-ternary */
 import React, { useState } from "react";
 import useTypingAnimation from "../../hooks/useTypingAnimation";
-// import { type ChecklistItem } from "./ChecklistPage";
-// import { renderItems } from "./renderItems";
-// import checklistData from "./checklist-data.json";
-import Checklist from "./Checklist";
-
-import "./style.css";
+import TheChecklist from "./TheChecklist";
 import CopyIcon from "../../../public/assets/CopyIcon";
+import { DescriptionBox } from "../../Components/DescriptionBox";
+import { PageTitle } from "../../Components/PageTitle";
+import { ButtonRow } from "../../Components/ButtonRow";
 
-interface IChecklistTabProps {
+interface IProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
-  // items: ChecklistItem[];
 }
 
-export const ChecklistTab: React.FC<IChecklistTabProps> = ({
-  setTab
-}: {
-  setTab: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+export const ChecklistTab: React.FC<IProps> = ({ setTab }: IProps) => {
   const text =
     "Here's a todo list to get you started. Click each item to mark as done.";
   const speed = 30;
-  const displayText = useTypingAnimation(text, speed);
-  // const [items] = useState<ChecklistItem[]>(checklistData);
+  const animatedSubtitle = useTypingAnimation(text, speed);
   const [isCopied, setIsCopied] = useState(false);
 
   function handleCopyLinkClick(): void {
@@ -37,14 +30,9 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
 
   return (
     <>
-      <div className="grid-tab-info">
-        <div className="grid-tab-title">Checklist</div>
+      <PageTitle title="Checklist" subtitle={animatedSubtitle} />
 
-        <div className="grid-tab-subtitle">{displayText}</div>
-      </div>
-
-      <div className="grid-tab-description">
-        <h3 className="description-title">It&apos;s open-source</h3>
+      <DescriptionBox title="It's open-source">
         <p>
           This is an open source project. If you have any suggestions or
           improvements, please feel free to{" "}
@@ -57,13 +45,14 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
           </a>
           .
         </p>
-      </div>
+      </DescriptionBox>
 
       <div className="grid-tab-control-box checklist">
-        <Checklist />
+        <TheChecklist />
       </div>
-      <div className="grid-button-row">
-        <div className="grid-button-back">
+
+      <ButtonRow
+        leftButton={
           <div
             className="tertiary-button"
             onClick={() => {
@@ -76,9 +65,8 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
             }}>
             What is this.covered?
           </div>
-        </div>
-        <div className="grid-button-middle"></div>
-        <div className="grid-button-forward">
+        }
+        rightButton={
           <button
             style={{ display: "flex", alignItems: "center" }}
             className="cta_button"
@@ -93,8 +81,8 @@ export const ChecklistTab: React.FC<IChecklistTabProps> = ({
               </>
             )}
           </button>
-        </div>
-      </div>
+        }
+      />
     </>
   );
 };

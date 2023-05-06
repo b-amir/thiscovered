@@ -1,0 +1,31 @@
+.grid-button-row {
+  display: grid;
+  grid-template-columns: 1fr 0fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "grid-button-left grid-button-middle grid-button-right";
+  grid-area: grid-button-row;
+  align-items: center;
+  justify-items: stretch;
+  margin: 40px 0 0 0;
+  padding: 0 40px;
+  background: var(--bg-2);
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid var(--border-color);
+  box-shadow: inset 0px -5px 8px 0px var(--shadow-color-2);
+}
+
+.grid-button-left {
+  grid-area: grid-button-left;
+}
+
+.grid-button-right {
+  grid-area: grid-button-right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.grid-button-middle {
+  grid-area: grid-button-middle;
+}

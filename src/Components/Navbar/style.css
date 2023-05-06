@@ -30,7 +30,6 @@ span.logo_dot {
 }
 
 span.logo_covered {
-  /* color: #434343; */
   color: var(--text-color-2);
   font-weight: normal;
   border-radius: 8px;
@@ -70,7 +69,6 @@ input:focus+.slider {
 input:checked+.slider {
   background-color: #3c384e;
   box-shadow: 0px 0px 0px 1px #00000014;
-
 }
 
 input:checked+.slider:before {
@@ -89,10 +87,10 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-/* more height for 435 media query */
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 425px) {
   .navbar {
     /* padding: 0 25px 0 20px; */
     height: 100px;
+    /* height: 10dvh; */
   }
 }

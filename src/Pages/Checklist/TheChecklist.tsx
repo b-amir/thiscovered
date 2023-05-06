@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
 import checklistData from "./checklist-data.json";
-// import "./style.css";
 
-interface Item {
+interface IItem {
   label: string;
   isChecked: boolean;
-  subItems: SubItem[];
+  subItems: ISubItem[];
 }
-interface SubItem {
+interface ISubItem {
   label: string;
   isChecked: boolean;
 }
 
-const Checklist: React.FC = () => {
-  const [items, setItems] = useState<Item[]>([]);
+const TheChecklist: React.FC = () => {
+  const [items, setItems] = useState<IItem[]>([]);
 
   useEffect(() => {
     const storedItems = localStorage.getItem("checklist-items");
     const parsedItems =
-      storedItems != null ? (JSON.parse(storedItems) as Item[]) : checklistData;
+      storedItems != null
+        ? (JSON.parse(storedItems) as IItem[])
+        : checklistData;
     setItems(parsedItems);
   }, []);
 
@@ -121,4 +122,4 @@ const Checklist: React.FC = () => {
   );
 };
 
-export default Checklist;
+export default TheChecklist;

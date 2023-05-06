@@ -35,15 +35,7 @@ footer.footer:hover {
 .footer-divider {
   display: flex;
   color: #7272725c;
-  /* padding: 10px; */
-  /* background: #9d9d9d; */
-  /* width: 3px; */
-  /* height: 3px; */
-  /* border-radius: 50%; */
-  /* margin: 20px; */
-  /* box-shadow: 0px 0px 0px 3px #80808024; */
 }
-
 
 @media only screen and (max-width: 800px) {
   .footer-divider {
@@ -52,7 +44,6 @@ footer.footer:hover {
 }
 
 .footer-info {
-  /* color: #4f4f4f; */
   color: var(--text-color-2);
   font-size: 14px;
   margin: 12px 0px;
@@ -71,7 +62,6 @@ footer a {
 }
 
 footer a:hover {
-  /* color: var(--text-color-2); */
   text-decoration: underline;
   transition: 0.3s all ease;
 }

@@ -8,7 +8,6 @@
   border-top-left-radius: 0.8rem;
 }
 
-
 .grid-cover-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -35,11 +34,8 @@
   grid-area: grid-info-box;
   position: absolute;
   top: 50px;
-  /* width: 65% !important; */
   width: clamp(80%, 85%, 95%);
   right: 5%;
-  /* padding: 20px; */
-  /* padding: clamp(5%, 5%, 8%); */
   color: white;
   display: flex;
   flex-direction: column;
@@ -50,14 +46,12 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(103, 116, 116, 0.3);
   overflow: hidden;
-  /* flex-wrap: nowrap; */
   justify-content: center;
   align-items: center;
   -webkit-user-select: none;
   user-select: none;
   min-width: 80%;
 }
-
 
 h2.InfoBox_name {
   font-weight: 900;
@@ -67,7 +61,6 @@ h2.InfoBox_name {
   margin: unset;
   text-shadow: 0px 0px 5px #00000045;
   text-align: center;
-  /* padding: 15px 0px; */
   line-height: 1.2;
   padding: 0 0 8px 0px;
   white-space: nowrap;
@@ -91,7 +84,6 @@ p.InfoBox_email {
   color: #efefef;
   font-size: larger;
   text-shadow: 0px 0px 4px #0000008a;
-  /* margin: 20px 10px; */
   line-height: 2.5;
   margin-top: 2%;
 }

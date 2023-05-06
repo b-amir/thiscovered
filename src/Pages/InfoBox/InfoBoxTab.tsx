@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { type IInfoBoxBG, type IPerson } from "../../App";
-import "./style.css";
+import { type IInfoBoxBG } from "../../types/IInfoBoxBG";
+import { type IPerson } from "../../types/IPerson";
 import { hexToRgb } from "../../utils/hexToRgb";
 import useTypingAnimation from "../../hooks/useTypingAnimation";
 import DownloadIcon from "../../../public/assets/DownloadIcon";
 import { downloadImage } from "../../utils/downloadImage";
+import { PageTitle } from "../../Components/PageTitle";
+import { DescriptionBox } from "../../Components/DescriptionBox";
+import { ButtonRow } from "../../Components/ButtonRow";
 
 interface IProps {
   updatePerson: (field: string, value: string) => void;
@@ -28,16 +31,13 @@ export const InfoBoxTab: React.FC<IProps> = ({
   const text =
     " And for the final touch, let's make it obvious who you are at the first impression.";
   const speed = 30;
-  const displayText = useTypingAnimation(text, speed);
+  const animatedSubtitle = useTypingAnimation(text, speed);
   const [showDescription, setShowDescription] = useState(false);
   const handleDownloadImage = downloadImage();
 
   return (
     <>
-      <div className="grid-tab-info">
-        <div className="grid-tab-title">Make it your banner</div>
-        <div className="grid-tab-subtitle">{displayText}</div>
-      </div>
+      <PageTitle title="Make it your banner" subtitle={animatedSubtitle} />
 
       <div className="grid-tab-control-box">
         <div className="grid-control-col grid-col-1">
@@ -186,11 +186,8 @@ export const InfoBoxTab: React.FC<IProps> = ({
                 onChange={(e) => {
                   setInfoBoxBG({
                     ...InfoBoxBG,
-
                     alpha: Number(e.target.value),
-
                     // and then the rgbaBackgroundColor is set
-
                     rgbaBackgroundColor: `rgba(${hexToRgb(
                       InfoBoxBG.hexBackgroundColor
                     )}, ${e.target.value})`
@@ -219,7 +216,7 @@ export const InfoBoxTab: React.FC<IProps> = ({
       </div>
 
       {showDescription && (
-        <div className="grid-tab-description no-title">
+        <DescriptionBox isSpecial={true}>
           <p>
             <strong>Note:</strong> You might have noticed that{" "}
             <u>the cool background blur effect</u> is missing from the
@@ -242,17 +239,15 @@ export const InfoBoxTab: React.FC<IProps> = ({
             className="secondary-button screenshot-mode">
             Screenshot mode
           </button>
-        </div>
+        </DescriptionBox>
       )}
 
-      <div className="grid-button-row">
-        <div className="grid-button-back">
-          {" "}
+      <ButtonRow
+        leftButton={
           <div
             className="tertiary-button"
             onClick={() => {
               setTab("checklist");
-
               window.scrollTo({
                 top: document.querySelector(".grid-tab-bar")?.clientHeight,
                 behavior: "smooth"
@@ -260,9 +255,8 @@ export const InfoBoxTab: React.FC<IProps> = ({
             }}>
             Want more tips?
           </div>
-        </div>
-        <div className="grid-button-middle"></div>
-        <div className="grid-button-forward">
+        }
+        rightButton={
           <button
             style={{ display: "flex" }}
             className="cta_button"
@@ -281,8 +275,8 @@ export const InfoBoxTab: React.FC<IProps> = ({
             <DownloadIcon />
             Download
           </button>
-        </div>
-      </div>
+        }
+      />
     </>
   );
 };

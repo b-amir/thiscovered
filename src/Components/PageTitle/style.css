@@ -1,0 +1,48 @@
+.grid-tab-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-tab-title grid-tab-title grid-tab-title"
+    "grid-tab-subtitle grid-tab-subtitle grid-tab-subtitle";
+  grid-area: grid-tab-info;
+  position: relative;
+  padding: 0 0px 0 40px;
+  justify-items: start;
+  justify-content: start;
+  align-items: end;
+}
+
+.grid-tab-title {
+  grid-area: grid-tab-title;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 12px 0 6px 0;
+}
+
+.grid-tab-subtitle {
+  grid-area: grid-tab-subtitle;
+  font-size: 16px;
+  font-weight: 400;
+  margin: unset;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-tab-info {
+    padding: 0 30px 0 30px;
+  }
+
+  .grid-tab-title {
+    font-size: 20px;
+    margin: 12px 0 6px 0;
+  }
+
+  .grid-tab-subtitle {
+    font-size: 14px;
+    margin: unset;
+  }
+
+}
