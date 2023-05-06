@@ -13,7 +13,8 @@
       "default",
       {
         "ignore": [
-          "backdrop-filter"
+          "backdrop-filter",
+          "-webkit-tap-highlight-color"
         ]
       }
     ],

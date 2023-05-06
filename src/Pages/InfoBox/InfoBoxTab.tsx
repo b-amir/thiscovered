@@ -216,7 +216,7 @@ export const InfoBoxTab: React.FC<IProps> = ({
       </div>
 
       {showDescription && (
-        <DescriptionBox isSpecial={true}>
+        <DescriptionBox title="About the blur effect" isSpecial={false}>
           <p>
             <strong>Note:</strong> You might have noticed that{" "}
             <u>the cool background blur effect</u> is missing from the

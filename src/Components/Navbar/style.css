@@ -52,7 +52,7 @@ span.logo_covered {
 
 .slider:before {
   position: absolute;
-  content: url(/assets/light2.svg);
+  content: url(/assets/light.svg);
   height: 26px;
   width: 26px;
   left: 8px;
