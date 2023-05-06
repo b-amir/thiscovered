@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./style.css";
 import { PageBody } from "./Components/PageBody";
-import { Navbar } from "./Components/Navbar";
+import { Header } from "./Components/Header";
 import { CoverBox } from "./Components/CoverBox";
 import { TabBar } from "./Components/TabBar";
 import { Footer } from "./Components/Footer";
@@ -72,7 +72,7 @@ export default function App(): JSX.Element {
 
   return (
     <>
-      <Navbar
+      <Header
         setTab={setTab}
         toggleTheme={toggleTheme}
         getCurrentTheme={getCurrentTheme}

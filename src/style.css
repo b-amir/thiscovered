@@ -60,6 +60,7 @@
 
     --shadow-color: #17191ad4;
     --shadow-color-2: #17191a73;
+    --shadow-color-3: #1f272852;
 
     --accent-2: #35302a;
     --accent-3: #72bcc875;
@@ -90,6 +91,7 @@
 
     --shadow-color: #ffffffd4;
     --shadow-color-2: #ffffff73;
+    --shadow-color-3: #ffffff2b;
 
     --accent-2: #dbd7d1;
     --accent-3: #9db3c869;
@@ -120,6 +122,7 @@
 
   --shadow-color: #17191ad4;
   --shadow-color-2: #17191a73;
+  --shadow-color-3: #1f272852;
 
   --accent-2: #35302a;
   --accent-3: #72bcc875;
@@ -148,6 +151,7 @@
 
   --shadow-color: #ffffffd4;
   --shadow-color-2: #ffffff73;
+  --shadow-color-3: #ffffff2b;
 
   --accent-2: #dbd7d1;
   --accent-3: #9db3c869;
@@ -496,7 +500,21 @@ p.control-tip {
   }
 
   .grid-divider {
-    grid-template-areas: "grid-tab-bar grid-tab-bar" !important;
+    z-index: 50 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "grid-tab-bar grid-tab-bar grid-tab-bar" !important;
+    grid-area: grid-divider;
+    z-index: 25 !important;
+    position: fixed;
+    bottom: 0px !important;
+    left: 0px;
+    box-shadow: inset 0px 5px 8px 0px var(--shadow-color);
+
+    min-height: 10dvh;
+    border-top: 1px solid var(--border-color-2);
+    background: var(--bg-mobile);
+    box-shadow: inset 0px 5px 8px 0px var(--shadow-color-3), 0px -1.6px 5.1px -19px rgba(0, 0, 0, 0.063), 0px -4.5px 14px -19px rgba(0, 0, 0, 0.09), 0px -10.9px 33.8px -19px rgba(0, 0, 0, 0.117), 0px -36px 112px -19px rgba(0, 0, 0, 0.18);
   }
 
   :root {
@@ -518,7 +536,8 @@ p.control-tip {
     width: 97% !important;
     border-top: 1px solid var(--border-color-2);
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px 140px 120px auto auto 120px;
+    grid-template-rows: 0px 140px minmax(120px, auto) auto auto minmax(120px, auto);
+    grid-auto-flow: row;
     grid-auto-flow: row;
     grid-template-areas:
       ". . . ."
@@ -528,6 +547,7 @@ p.control-tip {
       "grid-tab-description grid-tab-description grid-tab-description grid-tab-description"
       "grid-button-row grid-button-row grid-button-row grid-button-row";
     background-color: var(--bg-main-mobile);
+    min-height: 75dvh;
   }
 }
 

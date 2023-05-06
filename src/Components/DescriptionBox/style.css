@@ -77,6 +77,10 @@ h3.description-title {
   line-height: 25px;
 }
 
+.grid-tab-description.closed {
+  max-height: 85px;
+}
+
 .grid-tab-description:hover {
   background: #8986821c;
   transition: all 0.3s ease-in-out;

@@ -5,13 +5,13 @@ interface IProps {
   toggleTheme: () => void;
   getCurrentTheme: () => "dark" | "light" | "system";
 }
-export const Navbar: React.FC<IProps> = ({
+export const Header: React.FC<IProps> = ({
   setTab,
   toggleTheme,
   getCurrentTheme
 }) => {
   return (
-    <nav className="navbar">
+    <nav className="header">
       <h1
         className="logo"
         onClick={() => {

@@ -1,4 +1,4 @@
-.navbar {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,6 +9,7 @@
   padding: 0 25px 0 20px;
   -webkit-user-select: none;
   user-select: none;
+  min-height: 8dvh;
 }
 
 nav h1 {
@@ -88,7 +89,7 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 425px) {
-  .navbar {
+  .header {
     /* padding: 0 25px 0 20px; */
     height: 100px;
     /* height: 10dvh; */

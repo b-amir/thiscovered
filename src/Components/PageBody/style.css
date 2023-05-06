@@ -111,7 +111,7 @@ button.primary-button:hover {
     border-radius: 0;
   }
 
-  .navbar {
+  .header {
     padding: 0;
     width: 95vw !important;
   }
@@ -173,21 +173,6 @@ button.primary-button:hover {
 }
 
 @media only screen and (max-width: 425px) {
-  .grid-divider {
-    z-index: 50 !important;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "grid-tab-bar grid-tab-bar grid-tab-bar" !important;
-    grid-area: grid-divider;
-    z-index: 25 !important;
-    position: fixed;
-    bottom: 0px !important;
-    left: 0px;
-    border-top: 1px solid var(--border-color-2);
-    background: var(--bg-mobile);
-    box-shadow: inset 0px 5px 8px 0px var(--shadow-color-2), 0px -1.6px 5.1px -19px rgba(0, 0, 0, 0.063), 0px -4.5px 14px -19px rgba(0, 0, 0, 0.09), 0px -10.9px 33.8px -19px rgba(0, 0, 0, 0.117), 0px -36px 112px -19px rgba(0, 0, 0, 0.18);
-  }
-
   .grid-cover-box {
     grid-template-areas: "grid-profile-pic grid-info-box" !important;
     border-bottom: 4px solid var(--border-color) !important;

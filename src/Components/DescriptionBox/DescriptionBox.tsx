@@ -6,6 +6,7 @@ interface IProps {
   title?: string;
   children: React.ReactNode;
   isSpecial?: boolean;
+  openAtFirst?: boolean;
 }
 
 const mountedStyle = {
@@ -22,16 +23,17 @@ const unmountedStyle = {
 export function DescriptionBox({
   title,
   children,
-  isSpecial
+  isSpecial,
+  openAtFirst
 }: IProps): JSX.Element {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(openAtFirst);
   const toggleOpen = (): void => {
     setIsOpen(!isOpen);
   };
   return (
     <div
-      className={`grid-tab-description ${
-        isSpecial && "description-title special-type"
+      className={`${
+        isOpen ? "grid-tab-description open" : "grid-tab-description closed"
       }`}
       onClick={toggleOpen}>
       <h3 className="description-title">

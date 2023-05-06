@@ -67,7 +67,7 @@ export const AboutTab: React.FC<IProps> = ({ setTab, Person }) => {
         }
       />
 
-      <DescriptionBox title="What is this.covered?">
+      <DescriptionBox title="What is this.covered?" openAtFirst={true}>
         <p>
           this.covered is a simple cover image generator to make your LinkedIn
           profile stand out to employers at first glance.
