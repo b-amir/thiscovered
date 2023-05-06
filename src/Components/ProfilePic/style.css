@@ -1,7 +1,6 @@
 .grid-profile-pic {
   grid-area: grid-profile-pic;
   z-index: 2;
-
   background-image: url(./assets/defaultPP.svg);
   position: relative;
   top: -25px;
