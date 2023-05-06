@@ -78,8 +78,8 @@ h3.description-title {
 }
 
 .grid-tab-description:hover {
-  background: #e7e2dc1c;
-  transition: all 0.2s ease-in-out;
+  background: #8986821c;
+  transition: all 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 425px) {

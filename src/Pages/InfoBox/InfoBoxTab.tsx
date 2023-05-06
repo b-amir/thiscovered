@@ -259,7 +259,7 @@ export const InfoBoxTab: React.FC<IProps> = ({
         rightButton={
           <button
             style={{ display: "flex" }}
-            className="cta_button"
+            className="primary-button"
             onClick={() => {
               handleDownloadImage();
               setShowDescription(true);

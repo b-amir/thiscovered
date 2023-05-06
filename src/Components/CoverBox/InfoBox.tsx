@@ -67,12 +67,12 @@ export const InfoBox: React.FC<IProps> = ({
       id="infobox"
       style={fullHeight ? FullHeightInfoBoxStyle : InfoBoxStyle}>
       {name.length > 0 && (
-        <h2 className="InfoBox_name" style={NameFont}>
+        <h2 className="InfoBox-name" style={NameFont}>
           {name}
         </h2>
       )}
-      {jobTitle.length > 0 && <p className="InfoBox_job_title">{jobTitle}</p>}
-      {email.length > 0 && <p className="InfoBox_email">{email}</p>}
+      {jobTitle.length > 0 && <p className="InfoBox-job-title">{jobTitle}</p>}
+      {email.length > 0 && <p className="InfoBox-email">{email}</p>}
     </div>
   );
 };

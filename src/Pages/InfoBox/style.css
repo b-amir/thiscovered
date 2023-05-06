@@ -5,7 +5,7 @@ button.secondary-button.screenshot-mode {
   justify-content: center;
 }
 
-h2.InfoBox_name {
+h2.InfoBox-name {
   font-weight: 900;
   font-size: xx-large;
   color: #ffffffeb;
@@ -16,7 +16,7 @@ h2.InfoBox_name {
   line-height: 1.2;
 }
 
-p.InfoBox_job_title {
+p.InfoBox-job-title {
   font-weight: 500;
   background: #ffffff;
   padding: 8px 26px;
@@ -29,38 +29,38 @@ p.InfoBox_job_title {
   white-space: nowrap;
 }
 
-p.InfoBox_email {
+p.InfoBox-email {
   margin: 0;
 }
 
 @media (max-width: 768px) {
-  .grid-info-box h2.InfoBox_name {
+  .grid-info-box h2.InfoBox-name {
     font-size: 1.4rem;
   }
 
-  .grid-info-box p.InfoBox_job_title {
+  .grid-info-box p.InfoBox-job-title {
     font-size: 0.8rem;
     padding: 2px 8px;
     border-radius: 8px;
   }
 
-  .grid-info-box p.InfoBox_email {
+  .grid-info-box p.InfoBox-email {
     font-size: 0.75rem;
   }
 }
 
 @media (max-width: 425px) {
-  .grid-info-box h2.InfoBox_name {
+  .grid-info-box h2.InfoBox-name {
     font-size: 0.9rem;
   }
 
-  .grid-info-box p.InfoBox_job_title {
+  .grid-info-box p.InfoBox-job-title {
     font-size: 0.6rem;
     padding: 2px 10px;
     border-radius: 6px;
   }
 
-  .grid-info-box p.InfoBox_email {
+  .grid-info-box p.InfoBox-email {
     font-size: 0.55rem;
   }
 

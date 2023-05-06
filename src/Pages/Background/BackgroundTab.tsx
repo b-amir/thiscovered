@@ -121,7 +121,7 @@ export const BackgroundTab: React.FC<IProps> = ({
       <ButtonRow
         rightButton={
           <button
-            className="cta_button"
+            className="primary-button"
             onClick={() => {
               setTab("infoBox");
               window.scrollTo({

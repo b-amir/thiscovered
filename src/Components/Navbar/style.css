@@ -17,19 +17,19 @@ nav h1 {
   cursor: pointer;
 }
 
-span.logo_this {
+span.logo-this {
   color: var(--accent);
   font-style: italic;
   font-weight: 900;
   font-size: xx-large;
 }
 
-span.logo_dot {
+span.logo-dot {
   color: var(--accent-red);
   font-size: xx-large;
 }
 
-span.logo_covered {
+span.logo-covered {
   color: var(--text-color-2);
   font-weight: normal;
   border-radius: 8px;

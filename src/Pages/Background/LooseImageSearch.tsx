@@ -64,7 +64,7 @@ export const LooseImageSearch: React.FC<IProps> = ({
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            className="keyword_input"
+            className="keyword-input"
             placeholder="ex. Developer at work"
             // split the keyword by space and join them with +
             onChange={(event) => {
@@ -73,7 +73,7 @@ export const LooseImageSearch: React.FC<IProps> = ({
             }}
             value={query}
           />
-          <button className="secondary-button keyword_button">
+          <button className="secondary-button keyword-button">
             {data != null ? <ShuffleIcon /> : <FindIcon />}
           </button>
         </form>

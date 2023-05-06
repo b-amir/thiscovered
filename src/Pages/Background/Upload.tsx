@@ -14,7 +14,7 @@ const UploadImage: React.FC<IProps> = ({ setImageUrl, resetImagePosition }) => {
       <div className="custom-file-row">
         <label
           htmlFor="file-upload"
-          className="custom-file-upload upload_label secondary-button">
+          className="custom-file-upload upload-label secondary-button">
           Choose file
           <input
             id="file-upload"
@@ -32,7 +32,7 @@ const UploadImage: React.FC<IProps> = ({ setImageUrl, resetImagePosition }) => {
 
         {uploadedImage != null && (
           <button
-            className="upload_remove"
+            className="upload-remove"
             onClick={() => {
               setUploadedImage(null);
               setImageUrl("");

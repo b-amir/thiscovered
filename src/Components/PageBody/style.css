@@ -1,11 +1,4 @@
-.button_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 20px 2px;
-}
-
-.cta_button {
+.primary-button {
   all: unset;
   writing-mode: horizontal-tb !important;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -41,7 +34,7 @@
   user-select: none;
 }
 
-.cta_button.normal {
+.primary-button.normal {
   border-width: 2px;
   border-style: outset;
   border-color: var(--accent);
@@ -50,7 +43,7 @@
   color: var(--accent);
 }
 
-button.cta_button:hover {
+button.primary-button:hover {
   background-color: var(--accent-hover);
   color: white;
 }
@@ -174,7 +167,7 @@ button.cta_button:hover {
     padding: 0px 30px 0px 0px !important;
   }
 
-  .cta_button {
+  .primary-button {
     font-size: smaller;
   }
 }

@@ -69,7 +69,7 @@ const ExactImageSearch: React.FC<IProps> = ({
         <span>Keyword</span>
         <form onSubmit={handleSubmit}>
           <input
-            className="keyword_input"
+            className="keyword-input"
             type="text"
             placeholder="ex. Developer at work"
             value={query}
@@ -77,7 +77,7 @@ const ExactImageSearch: React.FC<IProps> = ({
               setQuery(e.target.value);
             }}
           />
-          <button className="secondary-button keyword_button" type="submit">
+          <button className="secondary-button keyword-button" type="submit">
             {data != null ? <ShuffleIcon /> : <FindIcon />}
           </button>
         </form>

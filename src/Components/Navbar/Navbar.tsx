@@ -21,9 +21,9 @@ export const Navbar: React.FC<IProps> = ({
             behavior: "smooth"
           });
         }}>
-        <span className="logo_this">this</span>
-        <span className="logo_dot">.</span>
-        <span className="logo_covered">covered</span>
+        <span className="logo-this">this</span>
+        <span className="logo-dot">.</span>
+        <span className="logo-covered">covered</span>
       </h1>
       <div className="theme-switch-wrapper">
         <label className="switch">

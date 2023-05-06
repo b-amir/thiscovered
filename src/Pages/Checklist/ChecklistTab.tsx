@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import useTypingAnimation from "../../hooks/useTypingAnimation";
 import TheChecklist from "./TheChecklist";
-import CopyIcon from "../../../public/assets/CopyIcon";
+import ShareIcon from "../../../public/assets/ShareIcon";
 import { DescriptionBox } from "../../Components/DescriptionBox";
 import { PageTitle } from "../../Components/PageTitle";
 import { ButtonRow } from "../../Components/ButtonRow";
@@ -69,7 +69,7 @@ export const ChecklistTab: React.FC<IProps> = ({ setTab }: IProps) => {
         rightButton={
           <button
             style={{ display: "flex", alignItems: "center" }}
-            className="cta_button"
+            className="primary-button"
             onTouchStart={handleCopyLinkClick}
             // onClick={handleCopyLinkClick}
             onMouseDown={handleCopyLinkClick}>
@@ -77,7 +77,7 @@ export const ChecklistTab: React.FC<IProps> = ({ setTab }: IProps) => {
               "Link copied"
             ) : (
               <>
-                <CopyIcon /> Share
+                <ShareIcon /> Share
               </>
             )}
           </button>
