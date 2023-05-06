@@ -8,6 +8,7 @@ import { Footer } from "./Components/Footer";
 import { ProfilePic } from "./Components/ProfilePic";
 import Modal from "./Components/Modal";
 import useModal from "./hooks/useModal";
+import { type Size, useWindowSize } from "./hooks/useWindowSize";
 import { createPortal } from "react-dom";
 import { type IPerson } from "./types/IPerson";
 import { type IInfoBoxBG } from "./types/IInfoBoxBG";
@@ -70,6 +71,8 @@ export default function App(): JSX.Element {
     visibleModal ? setShowPortal(true) : setShowPortal(false);
   }, [visibleModal]);
 
+  const size: Size = useWindowSize();
+
   return (
     <>
       <Header
@@ -96,7 +99,8 @@ export default function App(): JSX.Element {
           portalContainerRef={portalContainerRef}
         />
         <div className="grid-divider">
-          {ProfilePic()}
+          {/* <ProfilePic /> */}
+          {size.width > 425 ? <ProfilePic /> : null}
           <TabBar tab={tab} setTab={setTab} />
         </div>
 

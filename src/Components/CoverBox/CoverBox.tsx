@@ -4,8 +4,8 @@ import { InfoBox } from "./InfoBox";
 import { type IInfoBoxBG } from "../../types/IInfoBoxBG";
 import { type IPerson } from "../../types/IPerson";
 import { useDrag } from "../../hooks/useDrag";
-import { useWindowSize } from "../../hooks/useWindowSize";
-import type { Size } from "../../hooks/useWindowSize";
+import { ProfilePic } from "../ProfilePic";
+import { type Size, useWindowSize } from "../../hooks/useWindowSize";
 
 interface IProps {
   imageUrl: string;
@@ -56,13 +56,13 @@ export const CoverBox: React.FC<IProps> = ({
 
   return (
     <div
+      className="grid-cover-box"
       onMouseDown={handleMouseDown}
       onWheel={handleScroll}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onMouseEnter={disableScroll}
       onMouseLeave={enableScroll}
-      className="grid-cover-box"
       id="cover"
       style={{
         backgroundImage: `url(${
@@ -71,8 +71,10 @@ export const CoverBox: React.FC<IProps> = ({
         backgroundPosition: `${position.x}px ${position.y}px`,
         backgroundRepeat: "no-repeat",
         backgroundSize: `${backgroundsize}`,
-        touchAction: "none"
+        touchAction: "none",
+        filter: `${imageUrl === "" ? "var(--filter-pp)" : "none"}`
       }}>
+      {size.width < 425 ? <ProfilePic /> : null}
       <InfoBox
         name={Person.name}
         email={Person.email}

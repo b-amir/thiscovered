@@ -74,13 +74,13 @@ img.glasses {
 
   .grid-profile-pic {
     grid-area: grid-profile-pic;
-    z-index: 2;
+    z-index: 50;
     width: 100px !important;
     height: 100px !important;
-    top: 195px !important;
-    left: 5% !important;
-    display: none;
-    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    left: 15px !important;
+    position: relative;
   }
 
   .grid-profile-pic:hover img.glasses {

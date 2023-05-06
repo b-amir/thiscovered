@@ -56,6 +56,7 @@
 
     --border-color: #363a3d;
     --border-color-2: #857b6d2b;
+    --border-color-3: #8493934a;
     --border-color-pp: #2f2f2f;
 
     --shadow-color: #17191ad4;
@@ -87,6 +88,7 @@
 
     --border-color: #e0e0e0;
     --border-color-2: #0000002b;
+    --border-color-3: #5252523d;
     --border-color-pp: #fff;
 
     --shadow-color: #ffffffd4;
@@ -118,6 +120,7 @@
 
   --border-color: #363a3d;
   --border-color-2: #857b6d2b;
+  --border-color-3: #8493934a;
   --border-color-pp: #2f2f2f;
 
   --shadow-color: #17191ad4;
@@ -147,6 +150,7 @@
 
   --border-color: #e0e0e0;
   --border-color-2: #0000002b;
+  --border-color-3: #5252523d;
   --border-color-pp: #fff;
 
   --shadow-color: #ffffffd4;
@@ -497,6 +501,13 @@ p.control-tip {
     flex-wrap: nowrap !important;
     justify-content: center !important;
     align-items: center !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .grid-divider {
@@ -512,7 +523,7 @@ p.control-tip {
     box-shadow: inset 0px 5px 8px 0px var(--shadow-color);
 
     min-height: 10dvh;
-    border-top: 1px solid var(--border-color-2);
+    border-top: 1px solid var(--border-color-3);
     background: var(--bg-mobile);
     box-shadow: inset 0px 5px 8px 0px var(--shadow-color-3), 0px -1.6px 5.1px -19px rgba(0, 0, 0, 0.063), 0px -4.5px 14px -19px rgba(0, 0, 0, 0.09), 0px -10.9px 33.8px -19px rgba(0, 0, 0, 0.117), 0px -36px 112px -19px rgba(0, 0, 0, 0.18);
   }
@@ -548,6 +559,7 @@ p.control-tip {
       "grid-button-row grid-button-row grid-button-row grid-button-row";
     background-color: var(--bg-main-mobile);
     min-height: 75dvh;
+    border: 1px solid var(--border-color-2);
   }
 }
 

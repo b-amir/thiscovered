@@ -4,7 +4,7 @@
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: ". grid-info-box";
+  grid-template-areas: "grid-profile-pic grid-info-box";
   grid-area: grid-cover-box;
   width: 100%;
   max-height: 400px;
