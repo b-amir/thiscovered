@@ -6,7 +6,7 @@ import ShareIcon from "../../../public/assets/ShareIcon";
 import { DescriptionBox } from "../../Components/DescriptionBox";
 import { PageTitle } from "../../Components/PageTitle";
 import { ButtonRow } from "../../Components/ButtonRow";
-import { scrollToClass } from "../../utils/scrollTo";
+import { scrollToTop } from "../../utils/scrollTo";
 
 interface IProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
@@ -58,7 +58,7 @@ export const ChecklistTab: React.FC<IProps> = ({ setTab }: IProps) => {
             className="tertiary-button"
             onClick={() => {
               setTab("about");
-              scrollToClass("grid-tab-bar");
+              scrollToTop();
             }}>
             What is this.covered?
           </div>
