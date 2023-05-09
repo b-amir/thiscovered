@@ -7,6 +7,7 @@ import { LooseImageSearch } from "./LooseImageSearch";
 import { DescriptionBox } from "../../Components/DescriptionBox";
 import { PageTitle } from "../../Components/PageTitle";
 import { ButtonRow } from "../../Components/ButtonRow";
+import { scrollToClass } from "../../utils/scrollTo";
 
 interface IProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
@@ -124,10 +125,7 @@ export const BackgroundTab: React.FC<IProps> = ({
             className="primary-button"
             onClick={() => {
               setTab("infoBox");
-              window.scrollTo({
-                top: document.querySelector(".grid-tab-bar")?.clientHeight,
-                behavior: "smooth"
-              });
+              scrollToClass("grid-tab-bar");
             }}>
             Next Step
           </button>

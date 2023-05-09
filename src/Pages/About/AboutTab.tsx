@@ -4,6 +4,7 @@ import useTypingAnimation from "../../hooks/useTypingAnimation";
 import { DescriptionBox } from "../../Components/DescriptionBox";
 import { PageTitle } from "../../Components/PageTitle";
 import { ButtonRow } from "../../Components/ButtonRow";
+import { scrollToClass } from "../../utils/scrollTo";
 
 interface IProps {
   setTab: (tab: string) => void;
@@ -80,10 +81,7 @@ export const AboutTab: React.FC<IProps> = ({ setTab, Person }) => {
             className="primary-button"
             onClick={() => {
               setTab("background");
-              window.scrollTo({
-                top: document.querySelector(".grid-tab-bar")?.clientHeight,
-                behavior: "smooth"
-              });
+              scrollToClass("grid-tab-bar");
             }}>
             Start Editing
           </button>

@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollToTop } from "../../utils/scrollTo";
 
 interface IProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
@@ -16,10 +17,7 @@ export const Header: React.FC<IProps> = ({
         className="logo"
         onClick={() => {
           setTab("about");
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          });
+          scrollToTop();
         }}>
         <span className="logo-this">this</span>
         <span className="logo-dot">.</span>

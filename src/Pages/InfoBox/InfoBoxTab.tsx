@@ -8,6 +8,7 @@ import { downloadImage } from "../../utils/downloadImage";
 import { PageTitle } from "../../Components/PageTitle";
 import { DescriptionBox } from "../../Components/DescriptionBox";
 import { ButtonRow } from "../../Components/ButtonRow";
+import { scrollToClass } from "../../utils/scrollTo";
 
 interface IProps {
   updatePerson: (field: string, value: string) => void;
@@ -248,10 +249,7 @@ export const InfoBoxTab: React.FC<IProps> = ({
             className="tertiary-button"
             onClick={() => {
               setTab("checklist");
-              window.scrollTo({
-                top: document.querySelector(".grid-tab-bar")?.clientHeight,
-                behavior: "smooth"
-              });
+              scrollToClass("grid-tab-bar");
             }}>
             Want more tips?
           </div>
