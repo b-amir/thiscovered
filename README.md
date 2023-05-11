@@ -15,17 +15,20 @@
   <strong><a href="https://b-amir.github.io/thiscovered/">Try it Live!</a> </strong>
 </p>
 
-</br></br>
+</br>
+
 ## Bonus
 **improve your linkedin profile:**
 
 In addition to the cover photo editor, this.covered also includes a bonus feature: a checklist of things to do to create a better LinkedIn profile. Users can check off items on the list and keep track of their progress over time.
 
-</br></br>
+</br>
+
 ## Usage
 To use this.covered, simply [visit the website](https://b-amir.github.io/thiscovered/) and follow the instructions step by step.
 
-</br></br>
+</br>
+
 ## Features
 - **Image selection:** Choose from a variety of images from the Unsplash API or upload your own.
 
@@ -35,19 +38,21 @@ To use this.covered, simply [visit the website](https://b-amir.github.io/thiscov
 
 - **Checklist:** Follow a list of tips and tricks to create a more complete LinkedIn profile.
 
-
-</br></br>
+</br>
 
 ## Contributing
 If you'd like to contribute to this.covered, please fork the repository and create a pull request with your changes.
-</br></br></br></br>
+
+</br>
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-</br></br>
+</br>
 
 ## Acknowledgments
 The Unsplash API for providing high-quality images.
 The LinkedIn platform for inspiring this project.
 Feel free to customize this README file to fit the needs of your specific project. Good luck with your this.covered project!
+
+</br>
