@@ -9,11 +9,11 @@
 
 </br></br>
 
-<p align="center">
+<div align="center" >
   <img src="https://raw.githubusercontent.com/b-amir/thiscovered/main/header.gif">
   </br></br>
-  <strong><a href="https://b-amir.github.io/thiscovered/">Try it Live!</a> </strong>
-</p>
+ 🟢  |  <strong><a href="https://b-amir.github.io/thiscovered/">Try it Live!</a> </strong>
+</div>
 
 </br>
 
