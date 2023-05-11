@@ -4,6 +4,7 @@ export const ProfilePic = (): JSX.Element => {
   return (
     <div
       className="grid-profile-pic"
+      id="profile-pic"
       style={{
         backgroundImage: "url(./assets/defaultPP.svg)"
       }}>

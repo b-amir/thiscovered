@@ -9,6 +9,9 @@ import { PageTitle } from "../../Components/PageTitle";
 import { DescriptionBox } from "../../Components/DescriptionBox";
 import { ButtonRow } from "../../Components/ButtonRow";
 import { scrollToClass } from "../../utils/scrollTo";
+import AlignLeftIcon from "../../../public/assets/AlignLeftIcon";
+import AlignCenterIcon from "../../../public/assets/AlignCenterIcon";
+import AlignRightIcon from "../../../public/assets/AlignRightIcon";
 
 interface IProps {
   updatePerson: (field: string, value: string) => void;
@@ -141,6 +144,24 @@ export const InfoBoxTab: React.FC<IProps> = ({
           <div className="inner-control-col">
             <div className="inner-control-col control-row">
               <label>
+                <span>Frame:</span>
+                <input
+                  type="checkbox"
+                  id="show-switch"
+                  className="toggle-input"
+                  checked={InfoBoxBG.isShown}
+                  onChange={(e) => {
+                    setInfoBoxBG({
+                      ...InfoBoxBG,
+                      isShown: e.target.checked
+                    });
+                  }}
+                />
+                <label htmlFor="show-switch" className="toggle-label">
+                  Frame:
+                </label>{" "}
+              </label>
+              <label>
                 <span>Full Height:</span>
                 <input
                   type="checkbox"
@@ -158,23 +179,23 @@ export const InfoBoxTab: React.FC<IProps> = ({
                   Full Height:
                 </label>{" "}
               </label>
-              <label>
-                <span> Background Color:</span>
-                <input
-                  type="color"
-                  value={InfoBoxBG.hexBackgroundColor}
-                  onChange={(e) => {
-                    setInfoBoxBG({
-                      ...InfoBoxBG,
-                      hexBackgroundColor: e.target.value,
-                      rgbaBackgroundColor: `rgba(${hexToRgb(e.target.value)}, ${
-                        InfoBoxBG.alpha
-                      })`
-                    });
-                  }}
-                />
-              </label>
             </div>
+            <label>
+              <span> Background Color:</span>
+              <input
+                type="color"
+                value={InfoBoxBG.hexBackgroundColor}
+                onChange={(e) => {
+                  setInfoBoxBG({
+                    ...InfoBoxBG,
+                    hexBackgroundColor: e.target.value,
+                    rgbaBackgroundColor: `rgba(${hexToRgb(e.target.value)}, ${
+                      InfoBoxBG.alpha
+                    })`
+                  });
+                }}
+              />
+            </label>
 
             <label>
               <span>Color intensity:</span>
@@ -211,6 +232,68 @@ export const InfoBoxTab: React.FC<IProps> = ({
                   });
                 }}
               />
+            </label>
+            <label>
+              <span>Alignment:</span>
+
+              <div className="alignment">
+                <div>
+                  <label className="align-label">
+                    <input
+                      className="align-input"
+                      type="radio"
+                      name="radio"
+                      value={"flex-start"}
+                      checked={InfoBoxBG.alignment === "flex-start"}
+                      onChange={(e) => {
+                        setInfoBoxBG({
+                          ...InfoBoxBG,
+                          alignment: e.target.value
+                        });
+                      }}
+                    />
+                    <span className="align-name">
+                      <AlignLeftIcon />
+                    </span>
+                  </label>
+                  <label className="align-label">
+                    <input
+                      className="align-input"
+                      type="radio"
+                      name="radio"
+                      value={"center"}
+                      checked={InfoBoxBG.alignment === "center"}
+                      onChange={(e) => {
+                        setInfoBoxBG({
+                          ...InfoBoxBG,
+                          alignment: e.target.value
+                        });
+                      }}
+                    />
+                    <span className="align-name">
+                      <AlignCenterIcon />
+                    </span>
+                  </label>
+                  <label className="align-label">
+                    <input
+                      className="align-input"
+                      type="radio"
+                      name="radio"
+                      value={"flex-end"}
+                      checked={InfoBoxBG.alignment === "flex-end"}
+                      onChange={(e) => {
+                        setInfoBoxBG({
+                          ...InfoBoxBG,
+                          alignment: e.target.value
+                        });
+                      }}
+                    />
+                    <span className="align-name">
+                      <AlignRightIcon />
+                    </span>
+                  </label>
+                </div>
+              </div>
             </label>
           </div>
         </div>

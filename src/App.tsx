@@ -1,13 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./style.css";
+import Modal from "./Components/Modal";
+import useModal from "./hooks/useModal";
 import { PageBody } from "./Components/PageBody";
 import { Header } from "./Components/Header";
 import { CoverBox } from "./Components/CoverBox";
 import { TabBar } from "./Components/TabBar";
 import { Footer } from "./Components/Footer";
 import { ProfilePic } from "./Components/ProfilePic";
-import Modal from "./Components/Modal";
-import useModal from "./hooks/useModal";
 import { type Size, useWindowSize } from "./hooks/useWindowSize";
 import { createPortal } from "react-dom";
 import { type IPerson } from "./types/IPerson";
@@ -15,6 +14,7 @@ import { type IInfoBoxBG } from "./types/IInfoBoxBG";
 import { handleSwipe } from "./utils/handleSwipe";
 import { handleThemeToggle } from "./utils/handleThemeToggle";
 import { handleGetCurrentTheme } from "./utils/handleGetCurrentTheme";
+import "./style.css";
 
 export default function App(): JSX.Element {
   const [tab, setTab] = useState<string>(
@@ -31,7 +31,9 @@ export default function App(): JSX.Element {
     hexBackgroundColor: "#868686",
     borderRadius: 14,
     alpha: 0.35,
-    fullHeight: false
+    fullHeight: false,
+    isShown: true,
+    alignment: "center"
   });
   const emptyNameFiller = "Wanna Get Discovered?";
   const [Person, setPerson] = useState<IPerson>({

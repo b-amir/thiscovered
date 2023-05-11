@@ -87,6 +87,8 @@ export const CoverBox: React.FC<IProps> = ({
         borderRadius={InfoBoxBG.borderRadius}
         alpha={InfoBoxBG.alpha}
         fullHeight={InfoBoxBG.fullHeight}
+        isShown={InfoBoxBG.isShown}
+        alignment={InfoBoxBG.alignment}
       />
     </div>
   );

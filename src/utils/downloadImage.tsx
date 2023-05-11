@@ -1,9 +1,11 @@
 import domtoimage from "dom-to-image-more";
+import { ProfilePic } from "../Components/ProfilePic/ProfilePic";
 
 export function downloadImage() {
   return (): void => {
     const coverElement = document.getElementById("cover");
     const infoboxElement = document.getElementById("infobox");
+    const ProfilePicElement = document.getElementById("profile-pic");
     // to always get the 1584x396 size, regardless of the client's screen size:
     const standardCoverWidth = 1584;
     const clientCoverWidth = coverElement?.clientWidth;
@@ -18,11 +20,17 @@ export function downloadImage() {
 
       // untill support for backdrop-filter is better, we'll use a semi-transparent background in saved image.
       // change the infobox background opacity a little bit to avoid the complete transparency
-      infoboxElement &&
-        (infoboxElement.style.backgroundColor = "rgba(165, 165, 165, 0.81)");
+      // infoboxElement &&
+      //   (infoboxElement.style.backgroundColor = "rgba(165, 165, 165, 0.81)");
+      // setTimeout(() => {
+      //   infoboxElement &&
+      //     (infoboxElement.style.backgroundColor = "rgba(134, 134, 134, 0.35)");
+      // }, 1);
+
+      // hide the profile pic until the image is generated
+      ProfilePicElement && (ProfilePicElement.style.display = "none");
       setTimeout(() => {
-        infoboxElement &&
-          (infoboxElement.style.backgroundColor = "rgba(134, 134, 134, 0.35)");
+        ProfilePicElement && (ProfilePicElement.style.display = "block");
       }, 1);
 
       const options = {
