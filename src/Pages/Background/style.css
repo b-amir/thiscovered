@@ -81,7 +81,7 @@ button.secondary-button:hover {
 }
 
 input.keyword-input {
-  min-width: 85%;
+  min-width: 85% !important;
   border-radius: 12px 0 0 12px;
 }
 
